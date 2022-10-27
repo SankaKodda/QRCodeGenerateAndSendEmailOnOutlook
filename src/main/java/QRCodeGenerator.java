@@ -12,17 +12,18 @@ import java.io.IOException;
 import java.util.Hashtable;
 
 public class QRCodeGenerator extends  GetParticipants{
-    public static void main(String[] args) throws Exception {
-        excelReader();
-        QRCodeGenerator codeGenerator = new QRCodeGenerator();
+public static String filePath;
+   /* public static void main(String[] args) throws Exception {
+        *//*excelReader();
+        QRCodeGenerator codeGenerator = new QRCodeGenerator();*//*
 //        System.out.println(codeGenerator.writeQRCode(new Participants("Sanka","1234",077777777,02,05)));
-        codeGenerator.writeQRCode(new Participants(participantsArrayList));
 
-    }
+
+    }*/
 
     public String writeQRCode(Participants participants) throws Exception{
         String fileName= participants.getPin()+".png";
-        String filePath = "F:\\MAS\\BarcodeGen\\Xing\\qrcodegen\\src\\main\\QRCodes"+fileName;
+        filePath = "F:\\MAS\\BarcodeGen\\Xing\\qrcodegen\\src\\main\\QRCodes"+fileName;
         String fileType = "png";
         File qrFile = new File(filePath);
         Hashtable<EncodeHintType, ErrorCorrectionLevel> hintMap = new Hashtable<>();

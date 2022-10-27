@@ -5,18 +5,18 @@ public class Participants  {
     private String pin ;
     private String designation ;
     private String division;
-    private int mobile;
-    private int whatsApp;
+    private String mobile;
+    private String whatsApp;
     private String email ;
-    private int tableNo ;
-    private int seatNo ;
+    private String tableNo ;
+    private String seatNo ;
     private boolean award;
     private String awardName;
     private String awardCategory;
     private String awardDistributor;
 
-    public Participants(String name, String pin, String designation, String division, int mobile, int whatsApp,
-                        String email, int tableNo, int seatNo, boolean award, String awardName, String awardCategory,
+    public Participants(String name, String pin, String designation, String division, String mobile, String whatsApp,
+                        String email, String tableNo, String seatNo, boolean award, String awardName, String awardCategory,
                         String awardDistributor) {
         super();
         this.name = name;
@@ -37,13 +37,13 @@ public class Participants  {
 //        super();
 //    }
 
-    public Participants(String name, String pin, int mobile, int tableNo, int seatNo) {
+ /*   public Participants(String name, String pin, int mobile, int tableNo, int seatNo) {
         this.name = name;
         this.pin = pin;
         this.mobile = mobile;
         this.tableNo = tableNo;
         this.seatNo = seatNo;
-    }
+    }*/
 
     public Participants(ArrayList<Participants> participantsArrayList) {
 
@@ -82,19 +82,19 @@ public class Participants  {
         this.division = division;
     }
 
-    public int getMobile() {
+    public String getMobile() {
         return mobile;
     }
 
-    public void setMobile(int mobile) {
+    public void setMobile(String mobile) {
         this.mobile = mobile;
     }
 
-    public int getWhatsApp() {
+    public String getWhatsApp() {
         return whatsApp;
     }
 
-    public void setWhatsApp(int whatsApp) {
+    public void setWhatsApp(String whatsApp) {
         this.whatsApp = whatsApp;
     }
 
@@ -106,19 +106,19 @@ public class Participants  {
         this.email = email;
     }
 
-    public int getTableNo() {
+    public String getTableNo() {
         return tableNo;
     }
 
-    public void setTableNo(int tableNo) {
+    public void setTableNo(String tableNo) {
         this.tableNo = tableNo;
     }
 
-    public int getSeatNo() {
+    public String getSeatNo() {
         return seatNo;
     }
 
-    public void setSeatNo(int seatNo) {
+    public void setSeatNo(String seatNo) {
         this.seatNo = seatNo;
     }
 

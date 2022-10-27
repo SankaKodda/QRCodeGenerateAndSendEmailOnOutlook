@@ -4,18 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3af8fa63-a8ad-425b-a1e8-a7c917eb3e84" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/Participants.xlsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/GetParticipants.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Participants.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/QRCodeGenerator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/QrGenerate.java" afterDir="false" />
+    <list default="true" id="3af8fa63-a8ad-425b-a1e8-a7c917eb3e84" name="Changes" comment="Gen1">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/Participants.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/data/Participants.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/GetParticipants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GetParticipants.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Participants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Participants.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/QRCodeGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/QRCodeGenerator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/QRCodes/QRGEN1.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,7 +43,8 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;F:/MAS/BarcodeGen/Xing/qrcodegen/data&quot;
+    &quot;last_opened_file_path&quot;: &quot;F:/MAS/BarcodeGen/Xing/qrcodegen/data&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;
   }
 }</component>
   <component name="RecentsManager">
@@ -56,7 +53,7 @@
       <recent name="F:\MAS\BarcodeGen\Xing\qrcodegen" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.QRCodeGenerator">
+  <component name="RunManager" selected="Application.GetParticipants">
     <configuration name="GetParticipants" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="GetParticipants" />
       <module name="qrcodegen" />
@@ -73,8 +70,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.QRCodeGenerator" />
         <item itemvalue="Application.GetParticipants" />
+        <item itemvalue="Application.QRCodeGenerator" />
       </list>
     </recent_temporary>
   </component>
@@ -91,7 +88,18 @@
       <workItem from="1665670453619" duration="6418000" />
       <workItem from="1665730966689" duration="8000" />
       <workItem from="1666066167229" duration="1830000" />
+      <workItem from="1666109896375" duration="7619000" />
+      <workItem from="1666769023910" duration="2611000" />
+      <workItem from="1666842121917" duration="2159000" />
     </task>
+    <task id="LOCAL-00001" summary="Gen1">
+      <created>1666109966571</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1666109966571</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -107,5 +115,35 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Gen1" />
+    <option name="LAST_COMMIT_MESSAGE" value="Gen1" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/GetParticipants.java</url>
+          <line>167</line>
+          <option name="timeStamp" value="19" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/GetParticipants.java</url>
+          <line>207</line>
+          <option name="timeStamp" value="33" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/GetParticipants.java</url>
+          <line>205</line>
+          <option name="timeStamp" value="34" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/GetParticipants.java</url>
+          <line>203</line>
+          <option name="timeStamp" value="35" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
