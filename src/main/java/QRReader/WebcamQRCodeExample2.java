@@ -1,8 +1,9 @@
+package QRReader;
+
 import com.github.sarxos.webcam.Webcam;
 
 import java.awt.FlowLayout;
 import java.awt.event.ActionEvent;
-import java.awt.event.WindowEvent;
 import java.io.IOException;
 
 import javax.swing.AbstractAction;
@@ -33,8 +34,10 @@ public class WebcamQRCodeExample2 extends JFrame {
                     public void run() {
                         try (QrCapture qr = new QrCapture()) {
                             System.out.println(qr.getResult());
+                            String data = qr.getResult();
                             showMessage("QR code text is:\n" + qr.getResult() + "");
                             isClicked = false;
+                            
 
                         } catch (InterruptedException | IOException ex) {
                             ex.printStackTrace();

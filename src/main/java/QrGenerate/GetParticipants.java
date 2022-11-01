@@ -1,3 +1,5 @@
+package QrGenerate;
+
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -74,13 +76,13 @@ public class GetParticipants {
                         String awardName = formatter.formatCellValue(sheet.getRow(rowNum).getCell(11)).toString();
                         String awardCategory = formatter.formatCellValue(sheet.getRow(rowNum).getCell(12)).toString();
                         String awardDistributor = formatter.formatCellValue(sheet.getRow(rowNum).getCell(13)).toString();
-                       /* Participants participants = new Participants(name,pin,designation,division,mobile,whatsApp,email,
+                       /* QrGenerate.Participants participants = new QrGenerate.Participants(name,pin,designation,division,mobile,whatsApp,email,
                                 tableNo,seatNo,award,awardName,awardCategory,awardDistributor);*/
                         qrcode1.writeQRCode(new Participants(name, pin, designation, division, mobile, whatsApp, email,
                                 tableNo, seatNo, award, awardName, awardCategory, awardDistributor));
 //                        sendMails(email);
-                        sendOutlookMail(name, email);
-                        /*Participants participants =new Participants(name,pin,designation,division,mobile,whatsApp,email,
+//                        sendOutlookMail(name, email);
+                        /*QrGenerate.Participants participants =new QrGenerate.Participants(name,pin,designation,division,mobile,whatsApp,email,
                                 tableNo,seatNo,award,awardName,awardCategory,awardDistributor);
                         participantsArrayList.add(participants);*/
 

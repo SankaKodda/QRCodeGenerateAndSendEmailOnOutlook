@@ -1,3 +1,5 @@
+package QrGenerate;
+
 import java.util.ArrayList;
 
 public class Participants  {
@@ -33,11 +35,11 @@ public class Participants  {
         this.awardCategory = awardCategory;
         this.awardDistributor = awardDistributor;
     }
-//    public Participants(){
+//    public QrGenerate.Participants(){
 //        super();
 //    }
 
- /*   public Participants(String name, String pin, int mobile, int tableNo, int seatNo) {
+ /*   public QrGenerate.Participants(String name, String pin, int mobile, int tableNo, int seatNo) {
         this.name = name;
         this.pin = pin;
         this.mobile = mobile;

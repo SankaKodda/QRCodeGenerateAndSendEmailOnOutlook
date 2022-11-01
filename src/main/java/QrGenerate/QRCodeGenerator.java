@@ -1,3 +1,5 @@
+package QrGenerate;
+
 import com.google.zxing.BarcodeFormat;
 import com.google.zxing.EncodeHintType;
 import com.google.zxing.common.BitMatrix;
@@ -8,29 +10,28 @@ import javax.imageio.ImageIO;
 import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.io.File;
-import java.io.IOException;
 import java.util.Hashtable;
 
-public class QRCodeGenerator extends  GetParticipants{
+public class QRCodeGenerator extends GetParticipants {
 public static String filePath;
    /* public static void main(String[] args) throws Exception {
         *//*excelReader();
-        QRCodeGenerator codeGenerator = new QRCodeGenerator();*//*
-//        System.out.println(codeGenerator.writeQRCode(new Participants("Sanka","1234",077777777,02,05)));
+        QrGenerate.QRCodeGenerator codeGenerator = new QrGenerate.QRCodeGenerator();*//*
+//        System.out.println(codeGenerator.writeQRCode(new QrGenerate.Participants("Sanka","1234",077777777,02,05)));
 
 
     }*/
 
     public String writeQRCode(Participants participants) throws Exception{
         String fileName= participants.getPin()+".png";
-        filePath = "F:\\MAS\\BarcodeGen\\Xing\\qrcodegen\\src\\main\\QRCodes"+fileName;
+        filePath = "src/main/java/QRCodes/"+fileName;
         String fileType = "png";
         File qrFile = new File(filePath);
         Hashtable<EncodeHintType, ErrorCorrectionLevel> hintMap = new Hashtable<>();
         hintMap.put(EncodeHintType.ERROR_CORRECTION, ErrorCorrectionLevel.L);
         QRCodeWriter writer = new QRCodeWriter();
-        BitMatrix bitMatrix = writer.encode(participants.getName()+"\n"+participants.getEmail()+"\n"+participants.getPin()+"\n"+participants.getMobile()+"\n"+
-                        participants.isAward()
+        BitMatrix bitMatrix = writer.encode(participants.getName()+","+
+                        participants.isAward()+","+participants.getEmail()+","+participants.getPin()+","+participants.getMobile()
                 , BarcodeFormat.QR_CODE,350,350,hintMap);
         // Make the BufferedImage that are to hold the QRCode
         int matrixWidth = bitMatrix.getWidth();
