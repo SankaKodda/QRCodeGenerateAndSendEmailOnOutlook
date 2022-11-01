@@ -6,13 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="3af8fa63-a8ad-425b-a1e8-a7c917eb3e84" name="Changes" comment="cameraChange">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/GetParticipants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/QrGenerate/GetParticipants.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Participants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/QrGenerate/Participants.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/QRCodeGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/QrGenerate/QRCodeGenerator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/QrCapture.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/QRReader/QrCapture.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/WebcamDiscoveryListenerExample.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/QRReader/WebcamDiscoveryListenerExample.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/WebcamQRCodeExample.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/QRReader/WebcamQRCodeExample.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/WebcamQRCodeExample2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/QRReader/WebcamQRCodeExample2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/QRReader/QrCapture.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/QRReader/QrCapture.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/QRReader/WebcamQRCodeExample2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/QRReader/WebcamQRCodeExample2.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,10 +56,10 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.WebcamQRCodeExample2 (1)">
+  <component name="RunManager" selected="Application.WebcamQRCodeExample2 ">
     <configuration name="GetParticipants" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="QrGenerate.GetParticipants" />
-      <module name="qrcodegen" />
+      <module name="QRCodeGenerateAndSendEmailOnOutlook" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -77,14 +73,7 @@
     </configuration>
     <configuration name="WebcamDiscoveryListenerExample" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="QRReader.WebcamDiscoveryListenerExample" />
-      <module name="qrcodegen" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="WebcamQRCodeExample2 (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="QRReader.WebcamQRCodeExample2" />
-      <module name="qrcodegen" />
+      <module name="QRCodeGenerateAndSendEmailOnOutlook" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="QRReader.*" />
@@ -95,20 +84,39 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="WebcamQRCodeExample2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+    <configuration name="WebcamQRCodeExample2 (2)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="QRReader.WebcamQRCodeExample2" />
-      <module name="qrcodegen" />
+      <module name="QRCodeGenerateAndSendEmailOnOutlook" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="QRReader.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="WebcamQRCodeExample2 " type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="QRReader.WebcamQRCodeExample2" />
+      <module name="QRCodeGenerateAndSendEmailOnOutlook" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="QRReader.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.WebcamQRCodeExample2 (1)" />
+        <item itemvalue="Application.WebcamQRCodeExample2 " />
+        <item itemvalue="Application.WebcamDiscoveryListenerExample" />
+        <item itemvalue="Application.WebcamQRCodeExample2 (2)" />
         <item itemvalue="Application.GetParticipants" />
         <item itemvalue="Application.QRCodeGenerator" />
-        <item itemvalue="Application.WebcamQRCodeExample2" />
-        <item itemvalue="Application.WebcamDiscoveryListenerExample" />
       </list>
     </recent_temporary>
   </component>
@@ -135,6 +143,7 @@
       <workItem from="1666943149578" duration="1976000" />
       <workItem from="1667195345862" duration="2081000" />
       <workItem from="1667294191845" duration="13144000" />
+      <workItem from="1667316914076" duration="7899000" />
     </task>
     <task id="LOCAL-00001" summary="Gen1">
       <created>1666109966571</created>
