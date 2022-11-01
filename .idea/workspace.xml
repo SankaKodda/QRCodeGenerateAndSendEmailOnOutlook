@@ -4,16 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3af8fa63-a8ad-425b-a1e8-a7c917eb3e84" name="Changes" comment="EmailWith attachment">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/QrCapture.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/WebcamQRCodeExample.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/WebcamQRCodeExample2.java" afterDir="false" />
+    <list default="true" id="3af8fa63-a8ad-425b-a1e8-a7c917eb3e84" name="Changes" comment="Reader">
+      <change afterPath="$PROJECT_DIR$/src/main/java/WebcamDiscoveryListenerExample.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/Participants.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/data/Participants.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/GetParticipants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GetParticipants.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/QRCodeGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/QRCodeGenerator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/QrCapture.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/QrCapture.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/WebcamQRCodeExample2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/WebcamQRCodeExample2.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,15 +61,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="QRCodeGenerator" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="QRCodeGenerator" />
+    <configuration name="QrCapture" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="QrCapture" />
       <module name="qrcodegen" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="QrCapture" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="QrCapture" />
+    <configuration name="WebcamDiscoveryListenerExample" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="WebcamDiscoveryListenerExample" />
       <module name="qrcodegen" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -97,10 +92,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.WebcamQRCodeExample2" />
+        <item itemvalue="Application.WebcamDiscoveryListenerExample" />
         <item itemvalue="Application.WebcamQRCodeExample" />
         <item itemvalue="Application.QrCapture" />
         <item itemvalue="Application.GetParticipants" />
-        <item itemvalue="Application.QRCodeGenerator" />
       </list>
     </recent_temporary>
   </component>
@@ -126,7 +121,7 @@
       <workItem from="1666940753503" duration="1000000" />
       <workItem from="1666943149578" duration="1976000" />
       <workItem from="1667195345862" duration="2081000" />
-      <workItem from="1667294191845" duration="4089000" />
+      <workItem from="1667294191845" duration="9950000" />
     </task>
     <task id="LOCAL-00001" summary="Gen1">
       <created>1666109966571</created>
@@ -142,7 +137,14 @@
       <option name="project" value="LOCAL" />
       <updated>1666844363178</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Reader">
+      <created>1667298778809</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1667298778809</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -162,7 +164,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Gen1" />
     <MESSAGE value="EmailWith attachment" />
-    <option name="LAST_COMMIT_MESSAGE" value="EmailWith attachment" />
+    <MESSAGE value="Reader" />
+    <option name="LAST_COMMIT_MESSAGE" value="Reader" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -186,6 +189,25 @@
           <url>file://$PROJECT_DIR$/src/main/java/GetParticipants.java</url>
           <line>211</line>
           <option name="timeStamp" value="35" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/WebcamQRCodeExample2.java</url>
+          <line>22</line>
+          <option name="timeStamp" value="59" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/WebcamQRCodeExample2.java</url>
+          <line>21</line>
+          <option name="timeStamp" value="60" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/main/java/WebcamQRCodeExample2.java</url>
+          <line>28</line>
+          <properties method="actionPerformed">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="61" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

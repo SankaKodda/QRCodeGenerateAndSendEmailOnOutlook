@@ -17,10 +17,11 @@ import java.awt.image.BufferedImage;
 import java.io.Closeable;
 import java.io.FileInputStream;
 import java.io.IOException;
+import java.util.Vector;
 import java.util.concurrent.Exchanger;
 
 public class QrCapture extends JFrame implements Closeable {
-    public static void main(String[] args) throws Exception{
+    /*public static void main(String[] args) throws Exception{
         try {
             Webcam webcam = Webcam.getDefault();
             webcam.open();
@@ -32,7 +33,7 @@ public class QrCapture extends JFrame implements Closeable {
         }catch (Exception e){
 
         }
-    }
+    }*/
     private static final long serialVersionUID = 1L;
 
     private Webcam webcam = null;
@@ -60,7 +61,7 @@ public class QrCapture extends JFrame implements Closeable {
             }
         });
 
-        webcam = Webcam.getDefault();
+        webcam = Webcam.getWebcamByName("1080P Web Camera 1");
         webcam.setViewSize(WebcamResolution.QVGA.getSize());
         webcam.open();
 
@@ -74,7 +75,11 @@ public class QrCapture extends JFrame implements Closeable {
             @Override
             public void run() {
                 while (isVisible()) {
-                    read();
+                    try {
+                        read();
+                    } catch (IOException e) {
+                        throw new RuntimeException(e);
+                    }
                 }
             }
         });
@@ -86,7 +91,7 @@ public class QrCapture extends JFrame implements Closeable {
         return new BinaryBitmap(new HybridBinarizer(new BufferedImageLuminanceSource(image)));
     }
 
-    private void read() {
+    private void read() throws IOException {
 
         if (!webcam.isOpen()) {
             return;
@@ -108,6 +113,7 @@ public class QrCapture extends JFrame implements Closeable {
                 return;
             } finally {
                 dispose();
+                webcam.close();
             }
         }
     }
