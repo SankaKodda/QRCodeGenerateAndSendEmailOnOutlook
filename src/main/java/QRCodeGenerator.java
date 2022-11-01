@@ -29,8 +29,8 @@ public static String filePath;
         Hashtable<EncodeHintType, ErrorCorrectionLevel> hintMap = new Hashtable<>();
         hintMap.put(EncodeHintType.ERROR_CORRECTION, ErrorCorrectionLevel.L);
         QRCodeWriter writer = new QRCodeWriter();
-        BitMatrix bitMatrix = writer.encode(participants.getName()+"\n"+participants.getPin()+"\n"+participants.getMobile()+"\n"+
-                        participants.getTableNo()+"\n"+participants.getSeatNo()
+        BitMatrix bitMatrix = writer.encode(participants.getName()+"\n"+participants.getEmail()+"\n"+participants.getPin()+"\n"+participants.getMobile()+"\n"+
+                        participants.isAward()
                 , BarcodeFormat.QR_CODE,350,350,hintMap);
         // Make the BufferedImage that are to hold the QRCode
         int matrixWidth = bitMatrix.getWidth();

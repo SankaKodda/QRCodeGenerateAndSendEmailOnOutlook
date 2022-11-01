@@ -2,10 +2,12 @@ import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.stream.IntStream;
+
 import org.apache.poi.ss.usermodel.DataFormatter;
 import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+
 import java.util.Properties;
 
 import javax.mail.*;
@@ -15,6 +17,7 @@ import javax.mail.internet.MimeMessage;
 import javax.mail.internet.MimeMultipart;
 import java.io.IOException;
 import java.util.stream.IntStream;
+
 public class GetParticipants {
     public static int rowCount = 0;
 
@@ -23,6 +26,7 @@ public class GetParticipants {
     public static void main(String[] args) throws IOException, Exception {
         excelReader();
     }
+
     public static void excelReader() throws IOException {
 
 
@@ -34,7 +38,6 @@ public class GetParticipants {
         String sheetName = "Sheet1";
 
         // Create object from AddNewCartDetails Class
-
 
 
         // Read Excel file
@@ -58,25 +61,28 @@ public class GetParticipants {
                         String designation = formatter.formatCellValue(sheet.getRow(rowNum).getCell(2)).toString();
                         String division = formatter.formatCellValue(sheet.getRow(rowNum).getCell(3)).toString();
                         String plant = formatter.formatCellValue(sheet.getRow(rowNum).getCell(4)).toString();
-                        String mobile = formatter.formatCellValue(sheet.getRow(rowNum).getCell(5)).toString();;
-                        String  whatsApp = formatter.formatCellValue(sheet.getRow(rowNum).getCell(6)).toString();;
+                        String mobile = formatter.formatCellValue(sheet.getRow(rowNum).getCell(5)).toString();
+                        ;
+                        String whatsApp = formatter.formatCellValue(sheet.getRow(rowNum).getCell(6)).toString();
+                        ;
                         String email = formatter.formatCellValue(sheet.getRow(rowNum).getCell(7)).toString();
-                        String tableNo = formatter.formatCellValue(sheet.getRow(rowNum).getCell(8)).toString();;
-                        String seatNo = formatter.formatCellValue(sheet.getRow(rowNum).getCell(9)).toString();;
+                        String tableNo = formatter.formatCellValue(sheet.getRow(rowNum).getCell(8)).toString();
+                        ;
+                        String seatNo = formatter.formatCellValue(sheet.getRow(rowNum).getCell(9)).toString();
+                        ;
                         Boolean award = Boolean.valueOf(formatter.formatCellValue(sheet.getRow(rowNum).getCell(10)).toString());
                         String awardName = formatter.formatCellValue(sheet.getRow(rowNum).getCell(11)).toString();
                         String awardCategory = formatter.formatCellValue(sheet.getRow(rowNum).getCell(12)).toString();
                         String awardDistributor = formatter.formatCellValue(sheet.getRow(rowNum).getCell(13)).toString();
                        /* Participants participants = new Participants(name,pin,designation,division,mobile,whatsApp,email,
                                 tableNo,seatNo,award,awardName,awardCategory,awardDistributor);*/
-                        qrcode1.writeQRCode(new Participants(name,pin,designation,division,mobile,whatsApp,email,
-                                tableNo,seatNo,award,awardName,awardCategory,awardDistributor));
+                        qrcode1.writeQRCode(new Participants(name, pin, designation, division, mobile, whatsApp, email,
+                                tableNo, seatNo, award, awardName, awardCategory, awardDistributor));
 //                        sendMails(email);
-                        sendOutlookMail(email);
+                        sendOutlookMail(name, email);
                         /*Participants participants =new Participants(name,pin,designation,division,mobile,whatsApp,email,
                                 tableNo,seatNo,award,awardName,awardCategory,awardDistributor);
                         participantsArrayList.add(participants);*/
-
 
 
                     } catch (Exception e) {
@@ -85,10 +91,11 @@ public class GetParticipants {
                 }
         );
     }
-    public static void sendOutlookMail(String email){
+
+    public static void sendOutlookMail(String name, String email) {
         final String username = "rusanka123@hotmail.com";  // like yourname@outlook.com
         final String password = "Longasspanda16";   // password here
-
+        String upperCaseName = name.toUpperCase();
         Properties props = new Properties();
         props.put("mail.smtp.auth", "true");
         props.put("mail.smtp.starttls.enable", "true");
@@ -111,9 +118,9 @@ public class GetParticipants {
             message.setFrom(new InternetAddress(username));
             message.setRecipients(Message.RecipientType.TO,
                     InternetAddress.parse(email));   // like inzi769@gmail.com
-            message.setSubject("Test");
-            message.setText("HI you have done sending mail with outlook");
-            File f =new File(QRCodeGenerator.filePath);
+            message.setSubject("INVITATION To " + upperCaseName);
+            message.setText("HI " + name + "," + "\n" + "You have done sending mail with outlook");
+            File f = new File(QRCodeGenerator.filePath);
             attachmentPart.attachFile(f);
             multipart.addBodyPart(attachmentPart);
             message.setContent(multipart);
@@ -127,7 +134,8 @@ public class GetParticipants {
             throw new RuntimeException(e);
         }
     }
-    public static void sendMails(String email){
+
+    public static void sendMails(String email) {
         // Recipient's email ID needs to be mentioned.
         String to = email;
         System.out.println(to);
@@ -188,7 +196,7 @@ public class GetParticipants {
 
             try {
 
-                File f =new File(QRCodeGenerator.filePath);
+                File f = new File(QRCodeGenerator.filePath);
 
                 attachmentPart.attachFile(f);
                 textPart.setText("This is text");

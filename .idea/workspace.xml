@@ -4,14 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3af8fa63-a8ad-425b-a1e8-a7c917eb3e84" name="Changes" comment="Gen1">
+    <list default="true" id="3af8fa63-a8ad-425b-a1e8-a7c917eb3e84" name="Changes" comment="EmailWith attachment">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/QrCapture.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/WebcamQRCodeExample.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/WebcamQRCodeExample2.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/Participants.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/data/Participants.xlsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/GetParticipants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GetParticipants.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Participants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Participants.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/QRCodeGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/QRCodeGenerator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/QRCodes/QRGEN1.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,8 +54,11 @@
       <recent name="F:\MAS\BarcodeGen\Xing\qrcodegen\data" />
       <recent name="F:\MAS\BarcodeGen\Xing\qrcodegen" />
     </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="" />
+    </key>
   </component>
-  <component name="RunManager" selected="Application.GetParticipants">
+  <component name="RunManager" selected="Application.WebcamQRCodeExample2">
     <configuration name="GetParticipants" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="GetParticipants" />
       <module name="qrcodegen" />
@@ -68,8 +73,32 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="QrCapture" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="QrCapture" />
+      <module name="qrcodegen" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="WebcamQRCodeExample" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="WebcamQRCodeExample" />
+      <module name="qrcodegen" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="WebcamQRCodeExample2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="WebcamQRCodeExample2" />
+      <module name="qrcodegen" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.WebcamQRCodeExample2" />
+        <item itemvalue="Application.WebcamQRCodeExample" />
+        <item itemvalue="Application.QrCapture" />
         <item itemvalue="Application.GetParticipants" />
         <item itemvalue="Application.QRCodeGenerator" />
       </list>
@@ -90,7 +119,14 @@
       <workItem from="1666066167229" duration="1830000" />
       <workItem from="1666109896375" duration="7619000" />
       <workItem from="1666769023910" duration="2611000" />
-      <workItem from="1666842121917" duration="2159000" />
+      <workItem from="1666842121917" duration="2973000" />
+      <workItem from="1666862765001" duration="1025000" />
+      <workItem from="1666876781143" duration="1302000" />
+      <workItem from="1666932295329" duration="2308000" />
+      <workItem from="1666940753503" duration="1000000" />
+      <workItem from="1666943149578" duration="1976000" />
+      <workItem from="1667195345862" duration="2081000" />
+      <workItem from="1667294191845" duration="4089000" />
     </task>
     <task id="LOCAL-00001" summary="Gen1">
       <created>1666109966571</created>
@@ -99,7 +135,14 @@
       <option name="project" value="LOCAL" />
       <updated>1666109966571</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="EmailWith attachment">
+      <created>1666844363178</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1666844363178</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -118,29 +161,30 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Gen1" />
-    <option name="LAST_COMMIT_MESSAGE" value="Gen1" />
+    <MESSAGE value="EmailWith attachment" />
+    <option name="LAST_COMMIT_MESSAGE" value="EmailWith attachment" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/GetParticipants.java</url>
-          <line>167</line>
+          <line>175</line>
           <option name="timeStamp" value="19" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/GetParticipants.java</url>
-          <line>207</line>
+          <line>215</line>
           <option name="timeStamp" value="33" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/GetParticipants.java</url>
-          <line>205</line>
+          <line>213</line>
           <option name="timeStamp" value="34" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/GetParticipants.java</url>
-          <line>203</line>
+          <line>211</line>
           <option name="timeStamp" value="35" />
         </line-breakpoint>
       </breakpoints>
