@@ -4,21 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3af8fa63-a8ad-425b-a1e8-a7c917eb3e84" name="Changes" comment="FileOrganized">
-      <change afterPath="$PROJECT_DIR$/src/main/img/Frame.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/img/Frame1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/img/IE Summit Logo-Final-01.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/img/IE Summit Logo-Final.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/img/logo5050.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/img/logosmallest.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/img/thumbnail_Image.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/QrGenerate/LOgoQr1.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/QrGenerate/QR_Generate.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/QrGenerate/QrWithOverlayImage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Watermark.java" afterDir="false" />
+    <list default="true" id="3af8fa63-a8ad-425b-a1e8-a7c917eb3e84" name="Changes" comment="cameraChange">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/QrGenerate/GetParticipants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/QrGenerate/GetParticipants.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/QrGenerate/QRCodeGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/QrGenerate/QRCodeGenerator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/GetParticipants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/QrGenerate/GetParticipants.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Participants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/QrGenerate/Participants.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/QRCodeGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/QrGenerate/QRCodeGenerator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/QrCapture.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/QRReader/QrCapture.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/WebcamDiscoveryListenerExample.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/QRReader/WebcamDiscoveryListenerExample.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/WebcamQRCodeExample.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/QRReader/WebcamQRCodeExample.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/WebcamQRCodeExample2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/QRReader/WebcamQRCodeExample2.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,28 +26,11 @@
       </list>
     </option>
   </component>
-  <component name="FormatOnSaveOptions">
-    <option name="myRunOnSave" value="false" />
-    <option name="myAllFileTypesSelected" value="true" />
-    <option name="mySelectedFileTypes">
-      <set />
-    </option>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GoLibraries">
-    <option name="indexEntireGoPath" value="true" />
-  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
-  </component>
-  <component name="OptimizeOnSaveOptions">
-    <option name="myRunOnSave" value="false" />
-    <option name="myAllFileTypesSelected" value="true" />
-    <option name="mySelectedFileTypes">
-      <set />
-    </option>
   </component>
   <component name="ProjectId" id="2G4I31Mg4JAhibZUbBKoBSQoeUm" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -61,36 +38,29 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.go.format.on.save.advertiser.fired": "true",
-    "RunOnceActivity.go.formatter.settings.were.checked": "true",
-    "RunOnceActivity.go.migrated.go.modules.settings": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "go.import.settings.migrated": "true",
-    "last_opened_file_path": "F:/MAS/BarcodeGen/Xing/qrcodegen/src/main/img",
-    "nodejs_package_manager_path": "npm"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;F:/MAS/BarcodeGen/Xing/qrcodegen/data&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="F:\MAS\BarcodeGen\Xing\qrcodegen\src\main\img" />
-      <recent name="F:\MAS\BarcodeGen\Xing\qrcodegen\src\main" />
       <recent name="F:\MAS\BarcodeGen\Xing\qrcodegen\data" />
       <recent name="F:\MAS\BarcodeGen\Xing\qrcodegen" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="F:\MAS\BarcodeGen\Xing\qrcodegen\src\main\img" />
       <recent name="F:\MAS\BarcodeGen\Xing\qrcodegen\src\main\java\QRCodeTtpe1" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.GetParticipants">
+  <component name="RunManager" selected="Application.WebcamQRCodeExample2 (1)">
     <configuration name="GetParticipants" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="QrGenerate.GetParticipants" />
       <module name="qrcodegen" />
@@ -105,21 +75,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="QR_Generate" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="QrGenerate.QR_Generate" />
-      <module name="qrcodegen" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="QrGenerate.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Watermark" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Watermark" />
+    <configuration name="WebcamDiscoveryListenerExample" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="QRReader.WebcamDiscoveryListenerExample" />
       <module name="qrcodegen" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -138,13 +95,20 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="WebcamQRCodeExample2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="QRReader.WebcamQRCodeExample2" />
+      <module name="qrcodegen" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.GetParticipants" />
-        <item itemvalue="Application.Watermark" />
-        <item itemvalue="Application.QR_Generate" />
         <item itemvalue="Application.WebcamQRCodeExample2 (1)" />
+        <item itemvalue="Application.GetParticipants" />
         <item itemvalue="Application.QRCodeGenerator" />
+        <item itemvalue="Application.WebcamQRCodeExample2" />
+        <item itemvalue="Application.WebcamDiscoveryListenerExample" />
       </list>
     </recent_temporary>
   </component>
@@ -171,9 +135,6 @@
       <workItem from="1666943149578" duration="1976000" />
       <workItem from="1667195345862" duration="2081000" />
       <workItem from="1667294191845" duration="13144000" />
-      <workItem from="1667316514352" duration="93000" />
-      <workItem from="1667378294794" duration="2075000" />
-      <workItem from="1667389099360" duration="8908000" />
     </task>
     <task id="LOCAL-00001" summary="Gen1">
       <created>1666109966571</created>
@@ -203,14 +164,7 @@
       <option name="project" value="LOCAL" />
       <updated>1667309322181</updated>
     </task>
-    <task id="LOCAL-00005" summary="FileOrganized">
-      <created>1667316592309</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1667316592309</updated>
-    </task>
-    <option name="localTasksCounter" value="6" />
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -232,12 +186,7 @@
     <MESSAGE value="EmailWith attachment" />
     <MESSAGE value="Reader" />
     <MESSAGE value="cameraChange" />
-    <MESSAGE value="FileOrganized" />
-    <option name="LAST_COMMIT_MESSAGE" value="FileOrganized" />
-  </component>
-  <component name="VgoProject">
-    <integration-enabled>false</integration-enabled>
-    <settings-migrated>true</settings-migrated>
+    <option name="LAST_COMMIT_MESSAGE" value="cameraChange" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
