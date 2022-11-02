@@ -27,16 +27,23 @@ public static String filePath;
         filePath = "src/main/java/QRCodes/"+fileName;
         String fileType = "png";
         File qrFile = new File(filePath);
+
+
+
         Hashtable<EncodeHintType, ErrorCorrectionLevel> hintMap = new Hashtable<>();
         hintMap.put(EncodeHintType.ERROR_CORRECTION, ErrorCorrectionLevel.L);
         QRCodeWriter writer = new QRCodeWriter();
-        BitMatrix bitMatrix = writer.encode(participants.getName()+","+
-                        participants.isAward()+","+participants.getEmail()+","+participants.getPin()+","+participants.getMobile()
-                , BarcodeFormat.QR_CODE,350,350,hintMap);
+        String dataUser =(participants.getName()+","+
+                participants.isAward()+","+participants.getEmail()+","+participants.getPin()+","+participants.getMobile());
+
+        BitMatrix bitMatrix = writer.encode(dataUser
+                , BarcodeFormat.QR_CODE,450,450,hintMap);
         // Make the BufferedImage that are to hold the QRCode
         int matrixWidth = bitMatrix.getWidth();
         BufferedImage image = new BufferedImage(matrixWidth, matrixWidth, BufferedImage.TYPE_INT_RGB);
         image.createGraphics();
+
+
 
         Graphics2D graphics = (Graphics2D) image.getGraphics();
         graphics.setColor(Color.WHITE);
@@ -51,8 +58,14 @@ public static String filePath;
                 }
             }
         }
-        ImageIO.write(image, fileType,qrFile);
 
+        File file = new File("F:\\MAS\\BarcodeGen\\Xing\\qrcodegen\\src\\main\\img\\Frame1.png");
+        BufferedImage frame = ImageIO.read(file);
+        Graphics2D g = frame.createGraphics();
+        g.setComposite(AlphaComposite.getInstance(AlphaComposite.SRC_OVER, 1f));
+        g.drawImage(image, 188, 710, null);
+        g.dispose();
+        ImageIO.write(frame, fileType,qrFile);
         return null;
     }
 
