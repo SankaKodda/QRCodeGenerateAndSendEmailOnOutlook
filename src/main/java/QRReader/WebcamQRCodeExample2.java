@@ -1,18 +1,21 @@
 package QRReader;
 
 import com.github.sarxos.webcam.Webcam;
+import com.sun.net.httpserver.HttpServer;
+import io.github.bonigarcia.wdm.WebDriverManager;
 import org.apache.poi.ss.usermodel.*;
 import org.apache.poi.xssf.usermodel.XSSFFont;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
-import org.junit.Before;
+import org.jsoup.nodes.Document;
+import org.jsoup.nodes.Element;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 
-import java.awt.FlowLayout;
+import java.awt.*;
 import java.awt.event.ActionEvent;
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
-import java.io.IOException;
+import java.io.*;
+import java.net.InetSocketAddress;
 import java.util.ArrayList;
 
 
@@ -24,10 +27,11 @@ import javax.swing.JOptionPane;
 
 @SuppressWarnings("serial")
 public class WebcamQRCodeExample2 extends JFrame {
+    static WebDriver driver;
     private Webcam webcam = null;
     boolean isClicked = false;
-    public String name;
-    public String award;
+    public static String name;
+    public static boolean award;
     public String email;
     public String pin;
     public String number;
@@ -52,18 +56,33 @@ public class WebcamQRCodeExample2 extends JFrame {
                         try (QrCapture qr = new QrCapture()) {
                             String qrData = qr.getResult();
                             System.out.println(qrData);
-                            String[] dataList = qrData.split("[,]", 0);
-                            System.out.println(dataList);
-                            for (String myStr : dataList) {
-                                System.out.println(myStr);
-                            }
+                            String dataList[] = qrData.split("[,]", 0);
+//                            System.out.println(dataList);
+//                            for (String myStr : dataList) {
+//                                System.out.println(myStr);
+//                            }
                             name = dataList[0];
-                            award = dataList[1];
-                            email = dataList[2];
-                            pin = dataList[3];
-                            number = dataList[4];
-                            isAward = Boolean.parseBoolean(award);
+                            award = Boolean.parseBoolean(dataList[1]);
+                            System.out.println(name);
+                            if(award){
+                                openBrowser();
+                                System.out.println("award Winner");
+                                awardWinnerCounter++;
+
+                            }else {
+                                openBrowser();
+                                System.out.println("Not a award Winner");
+                            }
+//                            award = dataList[1];
+//                            email = dataList[2];
+//                            pin = dataList[3];
+//                            number = dataList[4];
+
                             showMessage("QR code text is:\n" + qr.getResult() + "");
+//                            Runtime rTime = Runtime.getRuntime();
+
+
+
                             isClicked = false;
                             if (isAward) {
                                 awardWinnerCounter++;
@@ -80,7 +99,51 @@ public class WebcamQRCodeExample2 extends JFrame {
         pack();
         setVisible(true);
     }
+    public static void openBrowser() throws IOException, InterruptedException {
 
+        String url = "F:\\MAS\\BarcodeGen\\Xing\\qrcodegen\\src\\main\\Opening\\OpeningPage\\index.html";
+        File htmlFile = new File(url);
+        Desktop.getDesktop().browse(htmlFile.toURI());
+        Thread.sleep(5000);
+
+
+       /* Document doc = jsoup.parse(htmlContent);
+        Element p = doc.select("p").first();
+        p.text("My Example Text");
+
+        Document doc = new SAXBuilder().build(Main.class.getResource("/mailtemplate/DefaultMail.html"));
+
+        // XPath that finds the `p` element with id="first"
+        XPathExpression<Element> xpe = XPathFactory.instance().compile(
+                "//p[@id='name']", Filters.element());
+        Element p = xpe.evaluateFirst(doc);
+
+        p.setText("This is my text");
+
+        XMLOutputter xout = new XMLOutputter(Format.getPrettyFormat());
+        xout.output(doc, System.out);*/
+
+    }
+    public static void javaAPI() throws IOException {
+        HttpServer server = HttpServer.create(new InetSocketAddress(8080), 0);
+        server.createContext("/api/participantName", (exchange -> {
+
+            if ("GET".equals(exchange.getRequestMethod())) {
+                String responseText = name;
+                exchange.sendResponseHeaders(200, responseText.getBytes().length);
+                OutputStream output = exchange.getResponseBody();
+                output.write(responseText.getBytes());
+                output.flush();
+            } else {
+                exchange.sendResponseHeaders(405, -1);// 405 Method Not Allowed
+            }
+            exchange.close();
+        }));
+
+
+        server.setExecutor(null); // creates a default executor
+        server.start();
+    }
     public void close() throws IOException {
         webcam.close();
     }
@@ -97,7 +160,7 @@ public class WebcamQRCodeExample2 extends JFrame {
     public static void writeDataExcel(String name, Boolean awarded,String email,String pin){
 
     }
-    @Before
+
     public static void generateExcelFile() throws IOException {
         Workbook workbook = new XSSFWorkbook();
         File currDir = new File(".");

@@ -6,10 +6,17 @@ import com.google.zxing.common.BitMatrix;
 import com.google.zxing.qrcode.QRCodeWriter;
 import com.google.zxing.qrcode.decoder.ErrorCorrectionLevel;
 
+import javax.crypto.*;
+import javax.crypto.spec.IvParameterSpec;
 import javax.imageio.ImageIO;
 import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.io.File;
+import java.security.InvalidAlgorithmParameterException;
+import java.security.InvalidKeyException;
+import java.security.NoSuchAlgorithmException;
+import java.security.SecureRandom;
+import java.util.Base64;
 import java.util.Hashtable;
 
 public class QRCodeGenerator extends GetParticipants {
@@ -35,6 +42,9 @@ public static String filePath;
         QRCodeWriter writer = new QRCodeWriter();
         String dataUser =(participants.getName()+","+
                 participants.isAward()+","+participants.getEmail()+","+participants.getPin()+","+participants.getMobile());
+        /*String encryptData = encrypt("AES",dataUser,generateKey(256),generateIv());
+        System.out.println(encryptData);*/
+
 
         BitMatrix bitMatrix = writer.encode(dataUser
                 , BarcodeFormat.QR_CODE,450,450,hintMap);
@@ -67,6 +77,37 @@ public static String filePath;
         g.dispose();
         ImageIO.write(frame, fileType,qrFile);
         return null;
+    }
+    public static String encrypt(String algorithm, String input, SecretKey key,
+                                 IvParameterSpec iv) throws NoSuchPaddingException, NoSuchAlgorithmException,
+            InvalidAlgorithmParameterException, InvalidKeyException,
+            BadPaddingException, IllegalBlockSizeException {
+
+        Cipher cipher = Cipher.getInstance(algorithm);
+        cipher.init(Cipher.ENCRYPT_MODE, key, iv);
+        byte[] cipherText = cipher.doFinal(input.getBytes());
+        return Base64.getEncoder()
+                .encodeToString(cipherText);
+    }
+    public static SecretKey generateKey(int n) throws NoSuchAlgorithmException {
+        KeyGenerator keyGenerator = KeyGenerator.getInstance("AES");
+        keyGenerator.init(n);
+        SecretKey key = keyGenerator.generateKey();
+        return key;
+    }
+    public static IvParameterSpec generateIv() {
+        byte[] iv = new byte[16];
+        new SecureRandom().nextBytes(iv);
+        return new IvParameterSpec(iv);
+    }
+    public static String decrypt(String algorithm, String cipherText, SecretKey key, IvParameterSpec iv)
+            throws NoSuchPaddingException, NoSuchAlgorithmException, InvalidAlgorithmParameterException,
+            InvalidKeyException, BadPaddingException, IllegalBlockSizeException {
+        Cipher cipher = Cipher.getInstance(algorithm);
+        cipher.init(Cipher.DECRYPT_MODE, key, iv);
+        byte[] plainText = cipher.doFinal(Base64.getDecoder()
+                .decode(cipherText));
+        return new String(plainText);
     }
 
 }

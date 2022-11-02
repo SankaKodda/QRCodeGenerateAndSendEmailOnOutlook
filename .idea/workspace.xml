@@ -4,15 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3af8fa63-a8ad-425b-a1e8-a7c917eb3e84" name="Changes" comment="cameraChange">
+    <list default="true" id="3af8fa63-a8ad-425b-a1e8-a7c917eb3e84" name="Changes" comment="FrameToQr">
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/GetParticipants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/QrGenerate/GetParticipants.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Participants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/QrGenerate/Participants.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/QRCodeGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/QrGenerate/QRCodeGenerator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/QrCapture.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/QRReader/QrCapture.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/WebcamDiscoveryListenerExample.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/QRReader/WebcamDiscoveryListenerExample.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/WebcamQRCodeExample.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/QRReader/WebcamQRCodeExample.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/WebcamQRCodeExample2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/QRReader/WebcamQRCodeExample2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/QRReader/QrCapture.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/QRReader/QrCapture.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/QRReader/WebcamQRCodeExample2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/QRReader/WebcamQRCodeExample2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/QrGenerate/GetParticipants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/QrGenerate/GetParticipants.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/QrGenerate/QRCodeGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/QrGenerate/QRCodeGenerator.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,6 +22,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -38,18 +38,20 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;F:/MAS/BarcodeGen/Xing/qrcodegen/data&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "F:/MAS/BarcodeGen/Xing/qrcodegen/src/main/Opening/OpeningPage/img",
+    "nodejs_package_manager_path": "npm"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\MAS\BarcodeGen\Xing\qrcodegen\src\main\Opening\OpeningPage\img" />
+      <recent name="F:\MAS\BarcodeGen\Xing\qrcodegen\src\main\java\QRReader" />
       <recent name="F:\MAS\BarcodeGen\Xing\qrcodegen\data" />
       <recent name="F:\MAS\BarcodeGen\Xing\qrcodegen" />
     </key>
@@ -60,16 +62,9 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.WebcamQRCodeExample2 (1)">
+  <component name="RunManager" selected="Application.WebcamQRCodeExample2">
     <configuration name="GetParticipants" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="QrGenerate.GetParticipants" />
-      <module name="qrcodegen" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="QRCodeGenerator" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="QrGenerate.QRCodeGenerator" />
       <module name="qrcodegen" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -78,6 +73,12 @@
     <configuration name="WebcamDiscoveryListenerExample" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="QRReader.WebcamDiscoveryListenerExample" />
       <module name="qrcodegen" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="QRReader.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -95,20 +96,39 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="WebcamQRCodeExample2 (2)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="QRReader.WebcamQRCodeExample2" />
+      <module name="qrcodegen" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="QRReader.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="WebcamQRCodeExample2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="QRReader.WebcamQRCodeExample2" />
       <module name="qrcodegen" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="QRReader.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.WebcamQRCodeExample2 (1)" />
-        <item itemvalue="Application.GetParticipants" />
-        <item itemvalue="Application.QRCodeGenerator" />
         <item itemvalue="Application.WebcamQRCodeExample2" />
         <item itemvalue="Application.WebcamDiscoveryListenerExample" />
+        <item itemvalue="Application.WebcamQRCodeExample2 (2)" />
+        <item itemvalue="Application.GetParticipants" />
+        <item itemvalue="Application.WebcamQRCodeExample2 (1)" />
       </list>
     </recent_temporary>
   </component>
@@ -210,6 +230,31 @@
           <url>file://$PROJECT_DIR$/src/main/java/QrGenerate/GetParticipants.java</url>
           <line>211</line>
           <option name="timeStamp" value="35" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/QRReader/WebcamQRCodeExample2.java</url>
+          <line>64</line>
+          <option name="timeStamp" value="36" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/QRReader/WebcamQRCodeExample2.java</url>
+          <line>65</line>
+          <option name="timeStamp" value="37" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/QRReader/WebcamQRCodeExample2.java</url>
+          <line>66</line>
+          <option name="timeStamp" value="40" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/QRReader/WebcamQRCodeExample2.java</url>
+          <line>67</line>
+          <option name="timeStamp" value="41" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/QRReader/WebcamQRCodeExample2.java</url>
+          <line>63</line>
+          <option name="timeStamp" value="42" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

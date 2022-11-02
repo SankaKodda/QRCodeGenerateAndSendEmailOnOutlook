@@ -63,7 +63,8 @@ public class QrCapture extends JFrame implements Closeable {
             }
         });
 
-        webcam = Webcam.getWebcamByName("1080P Web Camera 0");
+//        webcam = Webcam.getWebcamByName("1080P Web Camera 0");
+        webcam = Webcam.getWebcamByName("Lenovo EasyCamera 0");
         webcam.setViewSize(WebcamResolution.QVGA.getSize());
         webcam.open();
 
