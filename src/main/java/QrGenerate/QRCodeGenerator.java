@@ -126,9 +126,6 @@ public static String filePath;
                 encrypt(key, initVector, "Hello World")));
     }
 
-    public static void main(String[] args) {
-
-    }
     /*public static String encrypt(String algorithm, String input, SecretKey key,
                                  IvParameterSpec iv) throws NoSuchPaddingException, NoSuchAlgorithmException,
             InvalidAlgorithmParameterException, InvalidKeyException,
