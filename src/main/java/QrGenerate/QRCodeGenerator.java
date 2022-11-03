@@ -8,18 +8,17 @@ import com.google.zxing.qrcode.decoder.ErrorCorrectionLevel;
 
 import javax.crypto.*;
 import javax.crypto.spec.IvParameterSpec;
+import javax.crypto.spec.SecretKeySpec;
 import javax.imageio.ImageIO;
 import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.io.File;
-import java.security.InvalidAlgorithmParameterException;
-import java.security.InvalidKeyException;
-import java.security.NoSuchAlgorithmException;
-import java.security.SecureRandom;
-import java.util.Base64;
+import org.apache.commons.codec.binary.Base64;
 import java.util.Hashtable;
 
 public class QRCodeGenerator extends GetParticipants {
+    public static String key = "Bar12345Bar12345"; // 128 bit key
+    public static String initVector = "RandomInitVector"; // 16 bytes IV
 public static String filePath;
    /* public static void main(String[] args) throws Exception {
         *//*excelReader();
@@ -42,11 +41,15 @@ public static String filePath;
         QRCodeWriter writer = new QRCodeWriter();
         String dataUser =(participants.getName()+","+
                 participants.isAward()+","+participants.getEmail()+","+participants.getPin()+","+participants.getMobile());
+        String encryptedDataParticipant = encrypt(key, initVector, dataUser);
+        System.out.println("EncryptedData :  "+encryptedDataParticipant);
+        String decryptedDataParticipant = decrypt(key, initVector,encryptedDataParticipant);
+        System.out.println("DecryptedData :  "+decryptedDataParticipant);
         /*String encryptData = encrypt("AES",dataUser,generateKey(256),generateIv());
         System.out.println(encryptData);*/
 
 
-        BitMatrix bitMatrix = writer.encode(dataUser
+        BitMatrix bitMatrix = writer.encode(encryptedDataParticipant
                 , BarcodeFormat.QR_CODE,450,450,hintMap);
         // Make the BufferedImage that are to hold the QRCode
         int matrixWidth = bitMatrix.getWidth();
@@ -78,7 +81,55 @@ public static String filePath;
         ImageIO.write(frame, fileType,qrFile);
         return null;
     }
-    public static String encrypt(String algorithm, String input, SecretKey key,
+    public static String encrypt(String key, String initVector, String value) {
+        try {
+            IvParameterSpec iv = new IvParameterSpec(initVector.getBytes("UTF-8"));
+            SecretKeySpec skeySpec = new SecretKeySpec(key.getBytes("UTF-8"), "AES");
+
+            Cipher cipher = Cipher.getInstance("AES/CBC/PKCS5PADDING");
+            cipher.init(Cipher.ENCRYPT_MODE, skeySpec, iv);
+
+            byte[] encrypted = cipher.doFinal(value.getBytes());
+            System.out.println("encrypted string: "
+                    + Base64.encodeBase64String(encrypted));
+
+            return Base64.encodeBase64String(encrypted);
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
+
+        return null;
+    }
+
+    public static String decrypt(String key, String initVector, String encrypted) {
+        try {
+            IvParameterSpec iv = new IvParameterSpec(initVector.getBytes("UTF-8"));
+            SecretKeySpec skeySpec = new SecretKeySpec(key.getBytes("UTF-8"), "AES");
+
+            Cipher cipher = Cipher.getInstance("AES/CBC/PKCS5PADDING");
+            cipher.init(Cipher.DECRYPT_MODE, skeySpec, iv);
+
+            byte[] original = cipher.doFinal(Base64.decodeBase64(encrypted));
+
+            return new String(original);
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
+
+        return null;
+    }
+    public static void encrpted1(){
+        String key = "Bar12345Bar12345"; // 128 bit key
+        String initVector = "RandomInitVector"; // 16 bytes IV
+
+        System.out.println(decrypt(key, initVector,
+                encrypt(key, initVector, "Hello World")));
+    }
+
+    public static void main(String[] args) {
+
+    }
+    /*public static String encrypt(String algorithm, String input, SecretKey key,
                                  IvParameterSpec iv) throws NoSuchPaddingException, NoSuchAlgorithmException,
             InvalidAlgorithmParameterException, InvalidKeyException,
             BadPaddingException, IllegalBlockSizeException {
@@ -108,6 +159,6 @@ public static String filePath;
         byte[] plainText = cipher.doFinal(Base64.getDecoder()
                 .decode(cipherText));
         return new String(plainText);
-    }
+    }*/
 
 }
