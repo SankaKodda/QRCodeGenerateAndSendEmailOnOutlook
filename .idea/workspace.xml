@@ -4,10 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3af8fa63-a8ad-425b-a1e8-a7c917eb3e84" name="Changes" comment="EncryptionWorks0.1">
+    <list default="true" id="3af8fa63-a8ad-425b-a1e8-a7c917eb3e84" name="Changes" comment="EncryptionWorks0.2">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Attends.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Attends.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/QRReader/WebcamQRCodeExample2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/QRReader/WebcamQRCodeExample2.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -162,6 +160,8 @@
       <workItem from="1667446931307" duration="1673000" />
       <workItem from="1667454583901" duration="3427000" />
       <workItem from="1667461476082" duration="1871000" />
+      <workItem from="1667480350273" duration="151000" />
+      <workItem from="1667483562388" duration="760000" />
     </task>
     <task id="LOCAL-00001" summary="Gen1">
       <created>1666109966571</created>
@@ -212,7 +212,14 @@
       <option name="project" value="LOCAL" />
       <updated>1667456153411</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="EncryptionWorks0.2">
+      <created>1667480391807</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1667480391807</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -237,7 +244,8 @@
     <MESSAGE value="Html" />
     <MESSAGE value="EncryptionWorks" />
     <MESSAGE value="EncryptionWorks0.1" />
-    <option name="LAST_COMMIT_MESSAGE" value="EncryptionWorks0.1" />
+    <MESSAGE value="EncryptionWorks0.2" />
+    <option name="LAST_COMMIT_MESSAGE" value="EncryptionWorks0.2" />
   </component>
   <component name="VgoProject">
     <integration-enabled>false</integration-enabled>
