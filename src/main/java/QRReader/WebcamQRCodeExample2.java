@@ -3,6 +3,7 @@ package QRReader;
 import com.github.sarxos.webcam.Webcam;
 import com.sun.net.httpserver.HttpServer;
 import io.github.bonigarcia.wdm.WebDriverManager;
+import org.apache.commons.codec.binary.Base64;
 import org.apache.poi.ss.usermodel.*;
 import org.apache.poi.xssf.usermodel.XSSFFont;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
@@ -19,6 +20,9 @@ import java.net.InetSocketAddress;
 import java.util.ArrayList;
 
 
+import javax.crypto.Cipher;
+import javax.crypto.spec.IvParameterSpec;
+import javax.crypto.spec.SecretKeySpec;
 import javax.swing.AbstractAction;
 import javax.swing.JButton;
 import javax.swing.JFrame;
@@ -37,7 +41,8 @@ public class WebcamQRCodeExample2 extends JFrame {
     public String number;
     public int awardWinnerCounter = 0;
     public boolean isAward;
-
+    public static String key = "Bar12345Bar12345"; // 128 bit key
+    public static String initVector = "RandomInitVector"; // 16 bytes IV
     public WebcamQRCodeExample2() {
 
         setTitle("Main frame");
@@ -56,7 +61,9 @@ public class WebcamQRCodeExample2 extends JFrame {
                         try (QrCapture qr = new QrCapture()) {
                             String qrData = qr.getResult();
                             System.out.println(qrData);
-                            String dataList[] = qrData.split("[,]", 0);
+                            String decryptedDataParticipant = decrypt(key, initVector,qrData);
+                            System.out.println("DecryptedData :  "+decryptedDataParticipant);
+                            String dataList[] = decryptedDataParticipant.split("[,]", 0);
 //                            System.out.println(dataList);
 //                            for (String myStr : dataList) {
 //                                System.out.println(myStr);
@@ -235,6 +242,23 @@ public class WebcamQRCodeExample2 extends JFrame {
         workbook.write(outputStream);
         workbook.close();
 
+    }
+    public static String decrypt(String key, String initVector, String encrypted) {
+        try {
+            IvParameterSpec iv = new IvParameterSpec(initVector.getBytes("UTF-8"));
+            SecretKeySpec skeySpec = new SecretKeySpec(key.getBytes("UTF-8"), "AES");
+
+            Cipher cipher = Cipher.getInstance("AES/CBC/PKCS5PADDING");
+            cipher.init(Cipher.DECRYPT_MODE, skeySpec, iv);
+
+            byte[] original = cipher.doFinal(Base64.decodeBase64(encrypted));
+
+            return new String(original);
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
+
+        return null;
     }
 
 

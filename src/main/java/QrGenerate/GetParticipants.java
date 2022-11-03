@@ -81,7 +81,7 @@ public class GetParticipants {
                         qrcode1.writeQRCode(new Participants(name, pin, designation, division, mobile, whatsApp, email,
                                 tableNo, seatNo, award, awardName, awardCategory, awardDistributor));
 //                        sendMails(email);
-//                        sendOutlookMail(name, email);
+                        sendOutlookMail(name, email);
                         /*QrGenerate.Participants participants =new QrGenerate.Participants(name,pin,designation,division,mobile,whatsApp,email,
                                 tableNo,seatNo,award,awardName,awardCategory,awardDistributor);
                         participantsArrayList.add(participants);*/
