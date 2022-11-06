@@ -27,7 +27,7 @@ import java.util.Hashtable;
 public class QRCodeGenerator extends GetParticipants {
     public static String key = "Bar12345Bar12345"; // 128 bit key
     public static String initVector = "RandomInitVector"; // 16 bytes IV
-
+    public String encryptedDataParticipant;
 public static String filePath;
    /* public static void main(String[] args) throws Exception {
         *//*excelReader();
@@ -45,6 +45,7 @@ public static String filePath;
     Workbook workbook = WorkbookFactory.create(inputStream);*/
 
     public QRCodeGenerator() throws IOException {
+
     }
 
     public String writeQRCode(Participants participants) throws Exception{
@@ -79,9 +80,6 @@ public static String filePath;
         int matrixWidth = bitMatrix.getWidth();
         BufferedImage image = new BufferedImage(matrixWidth, matrixWidth, BufferedImage.TYPE_INT_RGB);
         image.createGraphics();
-
-
-
         Graphics2D graphics = (Graphics2D) image.getGraphics();
         graphics.setColor(Color.WHITE);
         graphics.fillRect(0, 0, matrixWidth, matrixWidth);
@@ -96,7 +94,7 @@ public static String filePath;
             }
         }
 
-        File file = new File("I:\\MAS\\QR\\QRCodeGenerateAndSendEmailOnOutlook\\src\\main\\img\\Frame3.png");
+        File file = new File("I:\\MAS\\QR\\QRCodeGenerateAndSendEmailOnOutlook\\src\\main\\img\\Frame3-01.png");
         BufferedImage frame = ImageIO.read(file);
         Graphics2D g = frame.createGraphics();
         g.setComposite(AlphaComposite.getInstance(AlphaComposite.SRC_OVER, 1f));
@@ -133,7 +131,7 @@ public static String filePath;
     private static int generateId() {
         return (int) (Math.random() * 100000);
     }
-    public static void excelWriter() throws IOException {
+    /*public static void excelWriter() throws IOException {
         // Creating file object of existing excel file
 
         File xlsxFile = new File("I:\\MAS\\QR\\QRCodeGenerateAndSendEmailOnOutlook\\data\\Participants1.xlsx");
@@ -154,10 +152,10 @@ public static String filePath;
         // to insert only one column
         int newColCount = 1;
 
-        /*
+        *//*
          * Shifts columns between startColumn and endColumn, newColCount number of
          * columns. Code ensures that columns don't wrap around
-         */
+         *//*
         sheet.shiftColumns(startColumn, endColumn, newColCount);
 
         // Add the data
@@ -170,7 +168,7 @@ public static String filePath;
             }
         }
 
-    }
+    }*/
 
     public static String decrypt(String key, String initVector, String encrypted) {
         try {

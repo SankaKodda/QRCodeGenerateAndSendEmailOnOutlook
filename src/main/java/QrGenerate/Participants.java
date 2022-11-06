@@ -35,6 +35,16 @@ public class Participants  {
         this.awardCategory = awardCategory;
         this.awardDistributor = awardDistributor;
     }
+
+    public Participants(String name, String pin, String division, String mobile, String whatsApp, String email, Boolean award) {
+        this.name = name;
+        this.pin = pin;
+        this.division = division;
+        this.mobile = mobile;
+        this.whatsApp = whatsApp;
+        this.email = email;
+        this.award = award;
+    }
 //    public QrGenerate.Participants(){
 //        super();
 //    }
@@ -46,11 +56,6 @@ public class Participants  {
         this.tableNo = tableNo;
         this.seatNo = seatNo;
     }*/
-
-
-    public Participants(String name, String pin, String division, String mobile, String whatsApp, String email, Boolean award) {
-    }
-
 
     public String getName() {
         return name;

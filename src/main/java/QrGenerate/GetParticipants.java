@@ -22,13 +22,13 @@ import javax.mail.internet.MimeMultipart;
 
 public class GetParticipants {
     public static int rowCount = 0;
-    public static String encryptedDataParticipant;
+
 
     public static ArrayList<Participants> participantsArrayList = new ArrayList<>();
 
     public static void main(String[] args) throws IOException, Exception {
         excelReader();
-        insertNewColumnBeforeWithData(11);
+//        insertNewColumnBeforeWithData(11);
     }
 
     public static void excelReader() throws IOException {
@@ -82,9 +82,8 @@ public class GetParticipants {
                                 tableNo,seatNo,award,awardName,awardCategory,awardDistributor);*/
                         qrcode1.writeQRCode(new Participants(name, pin, division, mobile, whatsApp, email,
                                  award));
-
 //                        sendMails(email);
-//                        sendOutlookMail(name, email);
+//                        loginOutlookMail(name, email);
                         /*QrGenerate.Participants participants =new QrGenerate.Participants(name,pin,designation,division,mobile,whatsApp,email,
                                 tableNo,seatNo,award,awardName,awardCategory,awardDistributor);
                         participantsArrayList.add(participants);*/
@@ -126,7 +125,7 @@ public class GetParticipants {
             if (i == 0) {
                 row.createCell(colIndex).setCellValue("Encrypted Code");
             } else {
-                row.createCell(colIndex).setCellValue(encryptedDataParticipant);
+//                row.createCell(colIndex).setCellValue(encryptedDataParticipant);
             }
         }
         // Crating output stream and writing the updated workbook
@@ -143,9 +142,13 @@ public class GetParticipants {
 
     }
 
-    public static void sendOutlookMail(String name, String email) {
-        final String username = "rusanka123@hotmail.com";  // like yourname@outlook.com
-        final String password = "Longasspanda16";   // password here
+    public static void loginOutlookMail(String name, String email) {
+//        final String username = "IndustrialSummit2022@outlook.com";  // like yourname@outlook.com
+        final String username = "IESummit2022MAS@outlook.com";
+//        IESummit2022MAS@outlook.com
+//        final String password = "Industrialsummit@2022";   // password here
+        final String password = "IESummit2022@MAS";
+        //IESummit2022@MAS
         String upperCaseName = name.toUpperCase();
         Properties props = new Properties();
         props.put("mail.smtp.auth", "true");
@@ -161,7 +164,6 @@ public class GetParticipants {
                     }
                 });
         session.setDebug(true);
-
         try {
             Multipart multipart = new MimeMultipart();
             MimeBodyPart attachmentPart = new MimeBodyPart();
@@ -169,7 +171,7 @@ public class GetParticipants {
             message.setFrom(new InternetAddress(username));
             message.setRecipients(Message.RecipientType.TO,
                     InternetAddress.parse(email));   // like inzi769@gmail.com
-            message.setSubject("INVITATION To " + upperCaseName);
+            message.setSubject("INVITATION TO " + upperCaseName+" INDUSTRIAL SUMMIT 2022");
             message.setText("HI " + name + "," + "\n" + "You have done sending mail with outlook");
             File f = new File(QRCodeGenerator.filePath);
             attachmentPart.attachFile(f);
@@ -178,12 +180,18 @@ public class GetParticipants {
             Transport.send(message);
 
             System.out.println("Done");
+            Thread.sleep(2000);
 
         } catch (MessagingException e) {
             throw new RuntimeException(e);
         } catch (IOException e) {
             throw new RuntimeException(e);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
         }
+    }
+    public static void sendMailBody(){
+
     }
 
     public static void sendMails(String email) {
