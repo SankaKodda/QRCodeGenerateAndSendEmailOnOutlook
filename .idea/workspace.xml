@@ -4,8 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3af8fa63-a8ad-425b-a1e8-a7c917eb3e84" name="Changes" comment="EncryptionWorks0.2">
+    <list default="true" id="3af8fa63-a8ad-425b-a1e8-a7c917eb3e84" name="Changes" comment="EncryptionWorks0.1">
+      <change afterPath="$PROJECT_DIR$/src/main/java/DBHelper/DBController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/DBHelper/dbConnect.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/DBHelper/serviceAccountKey.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/Participants.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/data/Participants.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/QRReader/WebcamQRCodeExample2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/QRReader/WebcamQRCodeExample2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/QrGenerate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/QrGenerate.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/QrGenerate/GetParticipants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/QrGenerate/GetParticipants.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/QrGenerate/Participants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/QrGenerate/Participants.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/QrGenerate/QRCodeGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/QrGenerate/QRCodeGenerator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/QrGenerate/QR_Generate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/QrGenerate/QR_Generate.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,8 +26,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -46,12 +57,16 @@
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;go.import.settings.migrated&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;F:/MAS/BarcodeGen/Xing/qrcodegen/src/main/Opening/OpeningPage/img&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;
+    &quot;last_opened_file_path&quot;: &quot;I:/MAS/QR/QRCodeGenerateAndSendEmailOnOutlook/src/main/java/DBHelper&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;
   }
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="I:\MAS\QR\QRCodeGenerateAndSendEmailOnOutlook\src\main\java\DBHelper" />
       <recent name="F:\MAS\BarcodeGen\Xing\qrcodegen\src\main\Opening\OpeningPage\img" />
       <recent name="F:\MAS\BarcodeGen\Xing\qrcodegen\src\main\java\QRReader" />
       <recent name="F:\MAS\BarcodeGen\Xing\qrcodegen\data" />
@@ -66,8 +81,10 @@
   </component>
   <component name="RunManager" selected="Application.GetParticipants">
     <configuration name="GetParticipants" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="ALTERNATIVE_JRE_PATH" value="18" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <option name="MAIN_CLASS_NAME" value="QrGenerate.GetParticipants" />
-      <module name="qrcodegen" />
+      <module name="QRCodeGenerateAndSendEmailOnOutlook" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -160,8 +177,8 @@
       <workItem from="1667446931307" duration="1673000" />
       <workItem from="1667454583901" duration="3427000" />
       <workItem from="1667461476082" duration="1871000" />
-      <workItem from="1667480350273" duration="151000" />
-      <workItem from="1667483562388" duration="760000" />
+      <workItem from="1667484879064" duration="8015000" />
+      <workItem from="1667702205086" duration="7337000" />
     </task>
     <task id="LOCAL-00001" summary="Gen1">
       <created>1666109966571</created>
@@ -212,14 +229,7 @@
       <option name="project" value="LOCAL" />
       <updated>1667456153411</updated>
     </task>
-    <task id="LOCAL-00008" summary="EncryptionWorks0.2">
-      <created>1667480391807</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1667480391807</updated>
-    </task>
-    <option name="localTasksCounter" value="9" />
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -244,37 +254,10 @@
     <MESSAGE value="Html" />
     <MESSAGE value="EncryptionWorks" />
     <MESSAGE value="EncryptionWorks0.1" />
-    <MESSAGE value="EncryptionWorks0.2" />
-    <option name="LAST_COMMIT_MESSAGE" value="EncryptionWorks0.2" />
+    <option name="LAST_COMMIT_MESSAGE" value="EncryptionWorks0.1" />
   </component>
   <component name="VgoProject">
     <integration-enabled>false</integration-enabled>
     <settings-migrated>true</settings-migrated>
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/QrGenerate/GetParticipants.java</url>
-          <line>175</line>
-          <option name="timeStamp" value="19" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/QrGenerate/GetParticipants.java</url>
-          <line>215</line>
-          <option name="timeStamp" value="33" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/QrGenerate/GetParticipants.java</url>
-          <line>213</line>
-          <option name="timeStamp" value="34" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/QrGenerate/GetParticipants.java</url>
-          <line>211</line>
-          <option name="timeStamp" value="35" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

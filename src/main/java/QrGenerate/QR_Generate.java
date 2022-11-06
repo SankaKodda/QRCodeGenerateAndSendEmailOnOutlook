@@ -21,7 +21,7 @@ import com.google.zxing.qrcode.decoder.ErrorCorrectionLevel;
 
 public class QR_Generate {
     public static String filePath;
-    public static void main(String[] args) {
+    public static void QrGen1() {
         String fileName= "sanka.png";
         filePath = "src/main/java/QRCodes/"+fileName;
         String fileType = "png";
@@ -38,7 +38,7 @@ public class QR_Generate {
             // Load QR image
             BufferedImage qrImage = MatrixToImageWriter.toBufferedImage(bitMatrix, config);
             // Load logo image
-            File file = new File("F:\\MAS\\BarcodeGen\\Xing\\qrcodegen\\src\\main\\img\\logosmallest.png");
+            File file = new File("I:\\MAS\\QR\\QRCodeGenerateAndSendEmailOnOutlook\\src\\main\\img\\logosmallest.png");
             BufferedImage logoImage = ImageIO.read(file);
             // Calculate the delta height and width between QR code and logo
             int deltaHeight = qrImage.getHeight() - logoImage.getHeight();

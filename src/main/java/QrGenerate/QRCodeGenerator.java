@@ -14,11 +14,20 @@ import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import org.apache.commons.codec.binary.Base64;
+import org.apache.poi.ss.usermodel.Row;
+import org.apache.poi.ss.usermodel.Sheet;
+import org.apache.poi.ss.usermodel.Workbook;
+import org.apache.poi.ss.usermodel.WorkbookFactory;
+
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.util.Hashtable;
 
 public class QRCodeGenerator extends GetParticipants {
     public static String key = "Bar12345Bar12345"; // 128 bit key
     public static String initVector = "RandomInitVector"; // 16 bytes IV
+
 public static String filePath;
    /* public static void main(String[] args) throws Exception {
         *//*excelReader();
@@ -27,6 +36,16 @@ public static String filePath;
 
 
     }*/
+  /* File xlsxFile = new File("I:\\MAS\\QR\\QRCodeGenerateAndSendEmailOnOutlook\\data\\Participants1.xlsx");
+
+    //Creating input stream
+   FileInputStream inputStream = new FileInputStream(xlsxFile);
+
+    //Creating workbook from input stream
+    Workbook workbook = WorkbookFactory.create(inputStream);*/
+
+    public QRCodeGenerator() throws IOException {
+    }
 
     public String writeQRCode(Participants participants) throws Exception{
         String fileName= participants.getPin()+".png";
@@ -40,17 +59,22 @@ public static String filePath;
         hintMap.put(EncodeHintType.ERROR_CORRECTION, ErrorCorrectionLevel.L);
         QRCodeWriter writer = new QRCodeWriter();
         String dataUser =(participants.getName()+","+
-                participants.isAward()+","+participants.getEmail()+","+participants.getPin()+","+participants.getMobile());
-        String encryptedDataParticipant = encrypt(key, initVector, dataUser);
+                participants.isAward()+","+participants.getEmail()+","+participants.getPin()+","
+                +participants.getMobile())+participants.getDivision()+",";
+        encryptedDataParticipant = encrypt(key, initVector, dataUser);
         System.out.println("EncryptedData :  "+encryptedDataParticipant);
         String decryptedDataParticipant = decrypt(key, initVector,encryptedDataParticipant);
+//        excelWriter();
+//        insertNewColumnBeforeWithData(11);
         System.out.println("DecryptedData :  "+decryptedDataParticipant);
         /*String encryptData = encrypt("AES",dataUser,generateKey(256),generateIv());
         System.out.println(encryptData);*/
 
 
+        /*BitMatrix bitMatrix = writer.encode(encryptedDataParticipant
+                , BarcodeFormat.QR_CODE,450,450,hintMap);*/
         BitMatrix bitMatrix = writer.encode(encryptedDataParticipant
-                , BarcodeFormat.QR_CODE,450,450,hintMap);
+                , BarcodeFormat.QR_CODE,230,230,hintMap);
         // Make the BufferedImage that are to hold the QRCode
         int matrixWidth = bitMatrix.getWidth();
         BufferedImage image = new BufferedImage(matrixWidth, matrixWidth, BufferedImage.TYPE_INT_RGB);
@@ -72,11 +96,12 @@ public static String filePath;
             }
         }
 
-        File file = new File("F:\\MAS\\BarcodeGen\\Xing\\qrcodegen\\src\\main\\img\\Frame1.png");
+        File file = new File("I:\\MAS\\QR\\QRCodeGenerateAndSendEmailOnOutlook\\src\\main\\img\\Frame3.png");
         BufferedImage frame = ImageIO.read(file);
         Graphics2D g = frame.createGraphics();
         g.setComposite(AlphaComposite.getInstance(AlphaComposite.SRC_OVER, 1f));
-        g.drawImage(image, 188, 710, null);
+//        g.drawImage(image, 600, 2400, null);
+        g.drawImage(image, 84, 512, null);
         g.dispose();
         ImageIO.write(frame, fileType,qrFile);
         return null;
@@ -99,6 +124,52 @@ public static String filePath;
         }
 
         return null;
+    }
+
+
+    /*
+     * This method generate random id
+     */
+    private static int generateId() {
+        return (int) (Math.random() * 100000);
+    }
+    public static void excelWriter() throws IOException {
+        // Creating file object of existing excel file
+
+        File xlsxFile = new File("I:\\MAS\\QR\\QRCodeGenerateAndSendEmailOnOutlook\\data\\Participants1.xlsx");
+
+//Creating input stream
+        FileInputStream inputStream = new FileInputStream(xlsxFile);
+
+        //Creating workbook from input stream
+        Workbook workbook = WorkbookFactory.create(inputStream);
+
+        // Getting the first sheet from workbook
+        Sheet sheet = workbook.getSheetAt(0);
+
+        int colIndex=1;
+        int startColumn = colIndex;
+        int endColumn = sheet.getRow(0).getLastCellNum();
+
+        // to insert only one column
+        int newColCount = 1;
+
+        /*
+         * Shifts columns between startColumn and endColumn, newColCount number of
+         * columns. Code ensures that columns don't wrap around
+         */
+        sheet.shiftColumns(startColumn, endColumn, newColCount);
+
+        // Add the data
+        for (int i = 0; i <= sheet.getLastRowNum(); i++) {
+            Row row = sheet.getRow(i);
+            if (i == 0) {
+                row.createCell(colIndex).setCellValue("Encrypted Code");
+            } else {
+                row.createCell(colIndex).setCellValue(encryptedDataParticipant);
+            }
+        }
+
     }
 
     public static String decrypt(String key, String initVector, String encrypted) {

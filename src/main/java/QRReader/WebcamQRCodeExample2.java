@@ -2,16 +2,16 @@ package QRReader;
 
 import com.github.sarxos.webcam.Webcam;
 import com.sun.net.httpserver.HttpServer;
-import io.github.bonigarcia.wdm.WebDriverManager;
+//import io.github.bonigarcia.wdm.WebDriverManager;
 import org.apache.commons.codec.binary.Base64;
 import org.apache.poi.ss.usermodel.*;
 import org.apache.poi.xssf.usermodel.XSSFFont;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
-import org.jsoup.nodes.Document;
+/*import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeDriver;*/
 
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -31,7 +31,7 @@ import javax.swing.JOptionPane;
 
 @SuppressWarnings("serial")
 public class WebcamQRCodeExample2 extends JFrame {
-    static WebDriver driver;
+
     private Webcam webcam = null;
     boolean isClicked = false;
     public static String name;

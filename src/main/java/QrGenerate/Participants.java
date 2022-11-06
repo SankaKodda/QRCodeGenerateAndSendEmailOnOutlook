@@ -47,8 +47,8 @@ public class Participants  {
         this.seatNo = seatNo;
     }*/
 
-    public Participants(ArrayList<Participants> participantsArrayList) {
 
+    public Participants(String name, String pin, String division, String mobile, String whatsApp, String email, Boolean award) {
     }
 
 
@@ -132,7 +132,7 @@ public class Participants  {
         this.award = award;
     }
 
-    public String getAwardName() {
+    /*public String getAwardName() {
         return awardName;
     }
 
@@ -154,5 +154,5 @@ public class Participants  {
 
     public void setAwardDistributor(String awardDistributor) {
         this.awardDistributor = awardDistributor;
-    }
+    }*/
 }

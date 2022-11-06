@@ -15,6 +15,7 @@ import com.google.zxing.qrcode.QRCodeWriter;
 import com.google.zxing.qrcode.decoder.ErrorCorrectionLevel;
 
 public class QrGenerate {
+/*
     public static void main(String[] args) throws WriterException, IOException {
         String qrCodeText = "https://www.journaldev.com";
         String filePath = "JD.png";
@@ -24,6 +25,7 @@ public class QrGenerate {
         createQRImage(qrFile, qrCodeText, size, fileType);
         System.out.println("DONE");
     }
+*/
 
     private static void createQRImage(File qrFile, String qrCodeText, int size, String fileType)
             throws WriterException, IOException {

@@ -1,12 +1,13 @@
 package QrGenerate;
 
 import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.stream.IntStream;
 
-import org.apache.poi.ss.usermodel.DataFormatter;
-import org.apache.poi.ss.usermodel.Sheet;
+import org.apache.poi.ss.usermodel.*;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
@@ -17,23 +18,24 @@ import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeBodyPart;
 import javax.mail.internet.MimeMessage;
 import javax.mail.internet.MimeMultipart;
-import java.io.IOException;
-import java.util.stream.IntStream;
+
 
 public class GetParticipants {
     public static int rowCount = 0;
+    public static String encryptedDataParticipant;
 
     public static ArrayList<Participants> participantsArrayList = new ArrayList<>();
 
     public static void main(String[] args) throws IOException, Exception {
         excelReader();
+        insertNewColumnBeforeWithData(11);
     }
 
     public static void excelReader() throws IOException {
 
 
         // Read Excel file path
-        String excelPath = "./data/Participants.xlsx";
+        String excelPath = "I:\\MAS\\QR\\QRCodeGenerateAndSendEmailOnOutlook\\data\\Participants.xlsx";
         // Excel Sheet Name
 //        String sheetName = "OldUserName_ReplacedNewProducts";
         //Excel sheet for new Order
@@ -47,7 +49,7 @@ public class GetParticipants {
         QRCodeGenerator qrcode1 = new QRCodeGenerator();
 
         // Select the related sheet
-        XSSFSheet sheet = workbook.getSheet(sheetName);
+         XSSFSheet sheet = workbook.getSheet(sheetName);
         // get the count of rows in the sheet
         rowCount = sheet.getPhysicalNumberOfRows();
         // loop all rows using rowCount
@@ -60,7 +62,7 @@ public class GetParticipants {
                         DataFormatter formatter = new DataFormatter();
                         String name = formatter.formatCellValue(sheet.getRow(rowNum).getCell(0)).toString();
                         String pin = formatter.formatCellValue(sheet.getRow(rowNum).getCell(1)).toString();
-                        String designation = formatter.formatCellValue(sheet.getRow(rowNum).getCell(2)).toString();
+//                        String designation = formatter.formatCellValue(sheet.getRow(rowNum).getCell(2)).toString();
                         String division = formatter.formatCellValue(sheet.getRow(rowNum).getCell(3)).toString();
                         String plant = formatter.formatCellValue(sheet.getRow(rowNum).getCell(4)).toString();
                         String mobile = formatter.formatCellValue(sheet.getRow(rowNum).getCell(5)).toString();
@@ -68,20 +70,21 @@ public class GetParticipants {
                         String whatsApp = formatter.formatCellValue(sheet.getRow(rowNum).getCell(6)).toString();
                         ;
                         String email = formatter.formatCellValue(sheet.getRow(rowNum).getCell(7)).toString();
-                        String tableNo = formatter.formatCellValue(sheet.getRow(rowNum).getCell(8)).toString();
+                        /*String tableNo = formatter.formatCellValue(sheet.getRow(rowNum).getCell(8)).toString();
                         ;
-                        String seatNo = formatter.formatCellValue(sheet.getRow(rowNum).getCell(9)).toString();
+                        String seatNo = formatter.formatCellValue(sheet.getRow(rowNum).getCell(9)).toString();*/
                         ;
                         Boolean award = Boolean.valueOf(formatter.formatCellValue(sheet.getRow(rowNum).getCell(10)).toString());
-                        String awardName = formatter.formatCellValue(sheet.getRow(rowNum).getCell(11)).toString();
+                        /*String awardName = formatter.formatCellValue(sheet.getRow(rowNum).getCell(11)).toString();
                         String awardCategory = formatter.formatCellValue(sheet.getRow(rowNum).getCell(12)).toString();
-                        String awardDistributor = formatter.formatCellValue(sheet.getRow(rowNum).getCell(13)).toString();
+                        String awardDistributor = formatter.formatCellValue(sheet.getRow(rowNum).getCell(13)).toString();*/
                        /* QrGenerate.Participants participants = new QrGenerate.Participants(name,pin,designation,division,mobile,whatsApp,email,
                                 tableNo,seatNo,award,awardName,awardCategory,awardDistributor);*/
-                        qrcode1.writeQRCode(new Participants(name, pin, designation, division, mobile, whatsApp, email,
-                                tableNo, seatNo, award, awardName, awardCategory, awardDistributor));
+                        qrcode1.writeQRCode(new Participants(name, pin, division, mobile, whatsApp, email,
+                                 award));
+
 //                        sendMails(email);
-                        sendOutlookMail(name, email);
+//                        sendOutlookMail(name, email);
                         /*QrGenerate.Participants participants =new QrGenerate.Participants(name,pin,designation,division,mobile,whatsApp,email,
                                 tableNo,seatNo,award,awardName,awardCategory,awardDistributor);
                         participantsArrayList.add(participants);*/
@@ -92,6 +95,52 @@ public class GetParticipants {
                     }
                 }
         );
+    }
+    public static void insertNewColumnBeforeWithData(int colIndex) throws IOException {
+        File xlsxFile = new File("I:\\MAS\\QR\\QRCodeGenerateAndSendEmailOnOutlook\\data\\Participants1.xlsx");
+
+        //Creating input stream
+        FileInputStream inputStream = new FileInputStream(xlsxFile);
+
+        //Creating workbook from input stream
+        Workbook workbook = WorkbookFactory.create(inputStream);
+        Sheet sheet = workbook.getSheet("Sheet1");
+        // Getting the first sheet from workbook
+//        Sheet sheet = workbook.getSheetAt(0);
+
+        int startColumn = colIndex;
+        int endColumn = sheet.getRow(0).getLastCellNum();
+
+        // to insert only one column
+        int newColCount = 1;
+
+        /*
+         * Shifts columns between startColumn and endColumn, newColCount number of
+         * columns. Code ensures that columns don't wrap around
+         */
+        sheet.shiftColumns(startColumn, endColumn, newColCount);
+
+        // Add the data
+        for (int i = 0; i <= sheet.getLastRowNum(); i++) {
+            Row row = sheet.getRow(i);
+            if (i == 0) {
+                row.createCell(colIndex).setCellValue("Encrypted Code");
+            } else {
+                row.createCell(colIndex).setCellValue(encryptedDataParticipant);
+            }
+        }
+        // Crating output stream and writing the updated workbook
+        FileOutputStream os = new FileOutputStream(xlsxFile);
+        workbook.write(os);
+
+        // Close the workbook and output stream
+        workbook.close();
+        os.close();
+        /*
+         * This method generate random id
+         */
+
+
     }
 
     public static void sendOutlookMail(String name, String email) {
