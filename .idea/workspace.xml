@@ -4,11 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3af8fa63-a8ad-425b-a1e8-a7c917eb3e84" name="Changes" comment="EmailFinalized">
+    <list default="true" id="3af8fa63-a8ad-425b-a1e8-a7c917eb3e84" name="Changes" comment="Tested">
+      <change afterPath="$PROJECT_DIR$/src/main/java/DBHelper/masqr-ba96a-firebase-adminsdk-5wpn5-0dc11cf461.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/PresentList/dbConnect.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/DBHelper/dbConnect.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/PresentList/ListAttend.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PresentList/ListAttend.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/QrGenerate/GetParticipants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/QrGenerate/GetParticipants.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/QrGenerate/QRCodeGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/QrGenerate/QRCodeGenerator.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -174,7 +175,7 @@
       <workItem from="1667719130932" duration="3235000" />
       <workItem from="1667739702941" duration="3490000" />
       <workItem from="1667758052762" duration="1686000" />
-      <workItem from="1667795371707" duration="7590000" />
+      <workItem from="1667795371707" duration="10972000" />
     </task>
     <task id="LOCAL-00001" summary="Gen1">
       <created>1666109966571</created>
@@ -246,7 +247,14 @@
       <option name="project" value="LOCAL" />
       <updated>1667798763578</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Tested">
+      <created>1667804256535</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1667804256535</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -274,7 +282,8 @@
     <MESSAGE value="WriteToExcelEncryption" />
     <MESSAGE value="WriteToExcel" />
     <MESSAGE value="EmailFinalized" />
-    <option name="LAST_COMMIT_MESSAGE" value="EmailFinalized" />
+    <MESSAGE value="Tested" />
+    <option name="LAST_COMMIT_MESSAGE" value="Tested" />
   </component>
   <component name="VgoProject">
     <integration-enabled>false</integration-enabled>
