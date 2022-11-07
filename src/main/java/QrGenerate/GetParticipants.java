@@ -83,7 +83,7 @@ public class GetParticipants {
                         qrcode1.writeQRCode(new Participants(name, pin, division, mobile, whatsApp, email,
                                  award));
 //                        sendMails(email);
-//                        loginOutlookMail(name, email);
+                        loginOutlookMail(name, email);
                         /*QrGenerate.Participants participants =new QrGenerate.Participants(name,pin,designation,division,mobile,whatsApp,email,
                                 tableNo,seatNo,award,awardName,awardCategory,awardDistributor);
                         participantsArrayList.add(participants);*/
@@ -171,8 +171,9 @@ public class GetParticipants {
             message.setFrom(new InternetAddress(username));
             message.setRecipients(Message.RecipientType.TO,
                     InternetAddress.parse(email));   // like inzi769@gmail.com
-            message.setSubject("INVITATION TO " + upperCaseName+" INDUSTRIAL SUMMIT 2022");
-            message.setText("HI " + name + "," + "\n" + "You have done sending mail with outlook");
+            message.setSubject("Registration for " +name+" at Front Desk on IE Summit 2022");
+            message.setText("HI " + name + "," + "\n" + "Your seat at the MAS IE Summit 2022 is confirmed.\n" +
+                    "Please use the following link to obtain your unique QR code:");
             File f = new File(QRCodeGenerator.filePath);
             attachmentPart.attachFile(f);
             multipart.addBodyPart(attachmentPart);
@@ -227,7 +228,7 @@ public class GetParticipants {
             protected PasswordAuthentication getPasswordAuthentication() {
 
 //                return new PasswordAuthentication("rusirumail@gmail.com", "sanka075");
-                return new PasswordAuthentication("rusanka123@hotmail.com", "Longasspanda16");
+                return new PasswordAuthentication("rusanka123@hotmail.com", "*****");
             }
 
         });
