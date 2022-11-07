@@ -9,10 +9,10 @@ import javax.crypto.spec.SecretKeySpec;
 public class ListAttend {
     public static String key = "Bar12345Bar12345"; // 128 bit key
     public static String initVector = "RandomInitVector"; // 16 bytes IV
-    public static String encryptedDetailAttend = "gfMGiDfRZEzv6QZQiQJ/sM8VWJA2po9ThXRdyV1DHUIGaW+0zZeJEn6udbUqIVC24PyiyrA+egltWlfRCwZ0Kw==";
+    public static String encryptedDetailAttend = "t+tIISSNldftR2VrHViBDs5prWyPqOwCWxPepBPo3WQvsuIaDheskh8s96SgAUoTnsE7vVdUkEFQDqzu42XZx705jLP/2u1oMu7JHRJmZ5c=";
     public static void main(String[] args) {
         String dataAttend = decrypt(key,initVector,encryptedDetailAttend);
-        System.out.println("Data "+dataAttend);
+        System.out.println("Data : "+dataAttend);
     }
     //gfMGiDfRZEzv6QZQiQJ/sM8VWJA2po9ThXRdyV1DHUIGaW+0zZeJEn6udbUqIVC24PyiyrA+egltWlfRCwZ0Kw==
     public static String decrypt(String key, String initVector, String encrypted) {

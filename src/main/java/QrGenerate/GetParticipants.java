@@ -35,7 +35,9 @@ public class GetParticipants {
 
 
         // Read Excel file path
-        String excelPath = "I:\\MAS\\QR\\QRCodeGenerateAndSendEmailOnOutlook\\data\\Participants.xlsx";
+//        String excelPath = "I:\\MAS\\QR\\QRCodeGenerateAndSendEmailOnOutlook\\data\\Participants.xlsx";
+        String excelPath = "I:\\MAS\\QR\\QRCodeGenerateAndSendEmailOnOutlook\\data\\Sample list for QR.xlsx";
+
         // Excel Sheet Name
 //        String sheetName = "OldUserName_ReplacedNewProducts";
         //Excel sheet for new Order
@@ -144,10 +146,10 @@ public class GetParticipants {
 
     public static void loginOutlookMail(String name, String email) {
 //        final String username = "IndustrialSummit2022@outlook.com";  // like yourname@outlook.com
-        final String username = "IESummit2022MAS@outlook.com";
+        final String username = "MASIESummit2022@outlook.com";
 //        IESummit2022MAS@outlook.com
 //        final String password = "Industrialsummit@2022";   // password here
-        final String password = "IESummit2022@MAS";
+        final String password = "MASIESummit@2022";
         //IESummit2022@MAS
         String upperCaseName = name.toUpperCase();
         Properties props = new Properties();
@@ -155,7 +157,6 @@ public class GetParticipants {
         props.put("mail.smtp.starttls.enable", "true");
         props.put("mail.smtp.host", "smtp-mail.outlook.com");
         props.put("mail.smtp.port", "587");
-
         Session session = Session.getInstance(props,
                 new javax.mail.Authenticator() {
                     @Override
@@ -166,22 +167,26 @@ public class GetParticipants {
         session.setDebug(true);
         try {
             Multipart multipart = new MimeMultipart();
+            MimeBodyPart context = new MimeBodyPart();
             MimeBodyPart attachmentPart = new MimeBodyPart();
             Message message = new MimeMessage(session);
             message.setFrom(new InternetAddress(username));
             message.setRecipients(Message.RecipientType.TO,
                     InternetAddress.parse(email));   // like inzi769@gmail.com
-            message.setSubject("Registration for " +name+" at Front Desk on IE Summit 2022");
-            message.setText("HI " + name + "," + "\n" + "Your seat at the MAS IE Summit 2022 is confirmed.\n" +
-                    "Please use the following link to obtain your unique QR code:");
+            message.setSubject("Registration for " +name+" at Front Desk on IE Summit 2022(Test1)");
+            context.setText("Hi " + name + "," + "\n" + "Your seat at the MAS IE Summit 2022 is confirmed.\n" +
+                    "Please click on attached image to obtain your unique QR code.\n"+"See you at the Event on November 11th at 2.30 pm.");
             File f = new File(QRCodeGenerator.filePath);
+            multipart.addBodyPart(context);
+//
             attachmentPart.attachFile(f);
             multipart.addBodyPart(attachmentPart);
+
             message.setContent(multipart);
             Transport.send(message);
 
             System.out.println("Done");
-            Thread.sleep(2000);
+            Thread.sleep(1000);
 
         } catch (MessagingException e) {
             throw new RuntimeException(e);

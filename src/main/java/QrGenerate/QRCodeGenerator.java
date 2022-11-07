@@ -61,7 +61,7 @@ public static String filePath;
         QRCodeWriter writer = new QRCodeWriter();
         String dataUser =(participants.getName()+","+
                 participants.isAward()+","+participants.getEmail()+","+participants.getPin()+","
-                +participants.getMobile())+participants.getDivision()+",";
+                +participants.getMobile())+","+participants.getDivision();
         encryptedDataParticipant = encrypt(key, initVector, dataUser);
         System.out.println("EncryptedData :  "+encryptedDataParticipant);
         String decryptedDataParticipant = decrypt(key, initVector,encryptedDataParticipant);

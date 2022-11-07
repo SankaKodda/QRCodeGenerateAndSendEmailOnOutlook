@@ -4,12 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3af8fa63-a8ad-425b-a1e8-a7c917eb3e84" name="Changes" comment="WriteToExcel">
-      <change afterPath="$PROJECT_DIR$/src/main/java/DBHelper/DBController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/DBHelper/dbConnect.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/DBHelper/serviceAccountKey.json" afterDir="false" />
+    <list default="true" id="3af8fa63-a8ad-425b-a1e8-a7c917eb3e84" name="Changes" comment="EmailFinalized">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/PresentList/ListAttend.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PresentList/ListAttend.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/QrGenerate/GetParticipants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/QrGenerate/GetParticipants.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/QrGenerate/QRCodeGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/QrGenerate/QRCodeGenerator.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,7 +71,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.GetParticipants">
+  <component name="RunManager" selected="Application.ListAttend">
     <configuration name="GetParticipants" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="ALTERNATIVE_JRE_PATH" value="18" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
@@ -136,8 +135,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.GetParticipants" />
         <item itemvalue="Application.ListAttend" />
+        <item itemvalue="Application.GetParticipants" />
         <item itemvalue="Application.WebcamQRCodeExample2" />
         <item itemvalue="Application.WebcamDiscoveryListenerExample" />
         <item itemvalue="Application.WebcamQRCodeExample2 (2)" />
@@ -175,7 +174,7 @@
       <workItem from="1667719130932" duration="3235000" />
       <workItem from="1667739702941" duration="3490000" />
       <workItem from="1667758052762" duration="1686000" />
-      <workItem from="1667795371707" duration="2466000" />
+      <workItem from="1667795371707" duration="7590000" />
     </task>
     <task id="LOCAL-00001" summary="Gen1">
       <created>1666109966571</created>
@@ -240,7 +239,14 @@
       <option name="project" value="LOCAL" />
       <updated>1667758157291</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="EmailFinalized">
+      <created>1667798763578</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1667798763578</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -267,7 +273,8 @@
     <MESSAGE value="EncryptionWorks0.1" />
     <MESSAGE value="WriteToExcelEncryption" />
     <MESSAGE value="WriteToExcel" />
-    <option name="LAST_COMMIT_MESSAGE" value="WriteToExcel" />
+    <MESSAGE value="EmailFinalized" />
+    <option name="LAST_COMMIT_MESSAGE" value="EmailFinalized" />
   </component>
   <component name="VgoProject">
     <integration-enabled>false</integration-enabled>
