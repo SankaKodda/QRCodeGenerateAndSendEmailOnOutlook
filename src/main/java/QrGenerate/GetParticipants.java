@@ -36,8 +36,10 @@ public class GetParticipants {
 
         // Read Excel file path
 //        String excelPath = "I:\\MAS\\QR\\QRCodeGenerateAndSendEmailOnOutlook\\data\\Participants.xlsx";
-        String excelPath = "I:\\MAS\\QR\\QRCodeGenerateAndSendEmailOnOutlook\\data\\Sample list for QR.xlsx";
-
+//        String excelPath = "I:\\MAS\\QR\\QRCodeGenerateAndSendEmailOnOutlook\\data\\Sample list for QR.xlsx";
+        ///LAPTOP
+        String excelPath = "F:\\MAS\\BarcodeGen\\Xing\\qrcodegen\\data\\Sample list for QR.xlsx";
+//        String excelPath = "F:\\MAS\\BarcodeGen\\Xing\\qrcodegen\\data\\Participants.xlsx";
         // Excel Sheet Name
 //        String sheetName = "OldUserName_ReplacedNewProducts";
         //Excel sheet for new Order
@@ -63,7 +65,7 @@ public class GetParticipants {
                         // Excel sheet formatter
                         DataFormatter formatter = new DataFormatter();
                         String name = formatter.formatCellValue(sheet.getRow(rowNum).getCell(0)).toString();
-                        String pin = formatter.formatCellValue(sheet.getRow(rowNum).getCell(1)).toString();
+//                        String pin = formatter.formatCellValue(sheet.getRow(rowNum).getCell(1)).toString();
 //                        String designation = formatter.formatCellValue(sheet.getRow(rowNum).getCell(2)).toString();
                         String division = formatter.formatCellValue(sheet.getRow(rowNum).getCell(3)).toString();
                         String plant = formatter.formatCellValue(sheet.getRow(rowNum).getCell(4)).toString();
@@ -82,10 +84,10 @@ public class GetParticipants {
                         String awardDistributor = formatter.formatCellValue(sheet.getRow(rowNum).getCell(13)).toString();*/
                        /* QrGenerate.Participants participants = new QrGenerate.Participants(name,pin,designation,division,mobile,whatsApp,email,
                                 tableNo,seatNo,award,awardName,awardCategory,awardDistributor);*/
-                        qrcode1.writeQRCode(new Participants(name, pin, division, mobile, whatsApp, email,
+                        qrcode1.writeQRCode(new Participants(name, division, email,
                                  award));
 //                        sendMails(email);
-                        loginOutlookMail(name, email);
+//                        loginOutlookMail(name, email);
                         /*QrGenerate.Participants participants =new QrGenerate.Participants(name,pin,designation,division,mobile,whatsApp,email,
                                 tableNo,seatNo,award,awardName,awardCategory,awardDistributor);
                         participantsArrayList.add(participants);*/
@@ -98,8 +100,8 @@ public class GetParticipants {
         );
     }
     public static void insertNewColumnBeforeWithData(int colIndex) throws IOException {
+//        File xlsxFile = new File("I:\\MAS\\QR\\QRCodeGenerateAndSendEmailOnOutlook\\data\\Participants1.xlsx");
         File xlsxFile = new File("I:\\MAS\\QR\\QRCodeGenerateAndSendEmailOnOutlook\\data\\Participants1.xlsx");
-
         //Creating input stream
         FileInputStream inputStream = new FileInputStream(xlsxFile);
 
@@ -146,10 +148,15 @@ public class GetParticipants {
 
     public static void loginOutlookMail(String name, String email) {
 //        final String username = "IndustrialSummit2022@outlook.com";  // like yourname@outlook.com
-        final String username = "MASIESummit2022@outlook.com";
+///NEwww
+//        final String username = "MASIESummit2022@outlook.com";
 //        IESummit2022MAS@outlook.com
 //        final String password = "Industrialsummit@2022";   // password here
-        final String password = "MASIESummit@2022";
+        final String username = "rusanka123@hotmail.com";
+//// NEww
+//        final String password = "MASIESummit@2022";
+        final String password = "Longasspanda16";
+        final String ccMail = "rusiru@fh.technology";
         //IESummit2022@MAS
         String upperCaseName = name.toUpperCase();
         Properties props = new Properties();
@@ -173,6 +180,7 @@ public class GetParticipants {
             message.setFrom(new InternetAddress(username));
             message.setRecipients(Message.RecipientType.TO,
                     InternetAddress.parse(email));   // like inzi769@gmail.com
+            message.setRecipients(Message.RecipientType.CC, InternetAddress.parse(ccMail));
             message.setSubject("Registration for " +name+" at Front Desk on IE Summit 2022(Test1)");
             context.setText("Hi " + name + "," + "\n" + "Your seat at the MAS IE Summit 2022 is confirmed.\n" +
                     "Please click on attached image to obtain your unique QR code.\n"+"See you at the Event on November 11th at 2.30 pm.");

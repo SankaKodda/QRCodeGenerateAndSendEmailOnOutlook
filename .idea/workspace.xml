@@ -4,12 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3af8fa63-a8ad-425b-a1e8-a7c917eb3e84" name="Changes" comment="Tested">
-      <change afterPath="$PROJECT_DIR$/src/main/java/DBHelper/masqr-ba96a-firebase-adminsdk-5wpn5-0dc11cf461.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/PresentList/dbConnect.java" afterDir="false" />
+    <list default="true" id="3af8fa63-a8ad-425b-a1e8-a7c917eb3e84" name="Changes" comment="images">
+      <change afterPath="$PROJECT_DIR$/src/main/img/Frame3-01.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/DBHelper/dbConnect.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/PresentList/ListAttend.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PresentList/ListAttend.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/QrGenerate/GetParticipants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/QrGenerate/GetParticipants.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/QrGenerate/Participants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/QrGenerate/Participants.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/QrGenerate/QRCodeGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/QrGenerate/QRCodeGenerator.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,31 +41,32 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.go.format.on.save.advertiser.fired&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.go.formatter.settings.were.checked&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.go.migrated.go.modules.settings&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.go.vendoring.notification.had.been.shown&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;go.import.settings.migrated&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;I:/MAS/QR/QRCodeGenerateAndSendEmailOnOutlook/src/main/java/DBHelper&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.go.format.on.save.advertiser.fired": "true",
+    "RunOnceActivity.go.formatter.settings.were.checked": "true",
+    "RunOnceActivity.go.migrated.go.modules.settings": "true",
+    "RunOnceActivity.go.vendoring.notification.had.been.shown": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "go.import.settings.migrated": "true",
+    "last_opened_file_path": "F:/MAS/BarcodeGen/Xing/qrcodegen/src/main/img",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.lookFeel"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\MAS\BarcodeGen\Xing\qrcodegen\src\main\img" />
       <recent name="I:\MAS\QR\QRCodeGenerateAndSendEmailOnOutlook\src\main\java\DBHelper" />
       <recent name="F:\MAS\BarcodeGen\Xing\qrcodegen\src\main\Opening\OpeningPage\img" />
       <recent name="F:\MAS\BarcodeGen\Xing\qrcodegen\src\main\java\QRReader" />
       <recent name="F:\MAS\BarcodeGen\Xing\qrcodegen\data" />
-      <recent name="F:\MAS\BarcodeGen\Xing\qrcodegen" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="F:\MAS\BarcodeGen\Xing\qrcodegen\src\main\java\QRCodeTtpe1" />
@@ -72,19 +75,21 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.ListAttend">
+  <component name="RunManager" selected="Application.GetParticipants">
     <configuration name="GetParticipants" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="ALTERNATIVE_JRE_PATH" value="18" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <option name="MAIN_CLASS_NAME" value="QrGenerate.GetParticipants" />
-      <module name="QRCodeGenerateAndSendEmailOnOutlook" />
+      <module name="qrcodegen" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <configuration name="ListAttend" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="ALTERNATIVE_JRE_PATH" value="17" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <option name="MAIN_CLASS_NAME" value="PresentList.ListAttend" />
-      <module name="QRCodeGenerateAndSendEmailOnOutlook" />
+      <module name="qrcodegen" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="PresentList.*" />
@@ -136,8 +141,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.ListAttend" />
         <item itemvalue="Application.GetParticipants" />
+        <item itemvalue="Application.ListAttend" />
         <item itemvalue="Application.WebcamQRCodeExample2" />
         <item itemvalue="Application.WebcamDiscoveryListenerExample" />
         <item itemvalue="Application.WebcamQRCodeExample2 (2)" />
@@ -176,6 +181,7 @@
       <workItem from="1667739702941" duration="3490000" />
       <workItem from="1667758052762" duration="1686000" />
       <workItem from="1667795371707" duration="10972000" />
+      <workItem from="1667892227475" duration="2981000" />
     </task>
     <task id="LOCAL-00001" summary="Gen1">
       <created>1666109966571</created>

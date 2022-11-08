@@ -49,7 +49,7 @@ public static String filePath;
     }
 
     public String writeQRCode(Participants participants) throws Exception{
-        String fileName= participants.getPin()+".png";
+        String fileName= participants.getEmail()+".png";
         filePath = "src/main/java/QRCodes/"+fileName;
         String fileType = "png";
         File qrFile = new File(filePath);
@@ -60,8 +60,7 @@ public static String filePath;
         hintMap.put(EncodeHintType.ERROR_CORRECTION, ErrorCorrectionLevel.L);
         QRCodeWriter writer = new QRCodeWriter();
         String dataUser =(participants.getName()+","+
-                participants.isAward()+","+participants.getEmail()+","+participants.getPin()+","
-                +participants.getMobile())+","+participants.getDivision();
+                participants.isAward()+","+participants.getEmail()+"," +participants.getDivision());
         encryptedDataParticipant = encrypt(key, initVector, dataUser);
         System.out.println("EncryptedData :  "+encryptedDataParticipant);
         String decryptedDataParticipant = decrypt(key, initVector,encryptedDataParticipant);
@@ -94,7 +93,8 @@ public static String filePath;
             }
         }
 
-        File file = new File("I:\\MAS\\QR\\QRCodeGenerateAndSendEmailOnOutlook\\src\\main\\img\\Frame3-01.png");
+//        File file = new File("I:\\MAS\\QR\\QRCodeGenerateAndSendEmailOnOutlook\\src\\main\\img\\Frame3-01.png");
+        File file = new File("F:\\MAS\\BarcodeGen\\Xing\\qrcodegen\\src\\main\\img\\Frame3-01.png");
         BufferedImage frame = ImageIO.read(file);
         Graphics2D g = frame.createGraphics();
         g.setComposite(AlphaComposite.getInstance(AlphaComposite.SRC_OVER, 1f));

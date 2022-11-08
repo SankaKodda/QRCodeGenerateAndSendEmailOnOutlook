@@ -36,12 +36,19 @@ public class Participants  {
         this.awardDistributor = awardDistributor;
     }
 
-    public Participants(String name, String pin, String division, String mobile, String whatsApp, String email, Boolean award) {
+    /*public Participants(String name, String pin, String division, String mobile, String whatsApp, String email, Boolean award) {
         this.name = name;
         this.pin = pin;
         this.division = division;
         this.mobile = mobile;
         this.whatsApp = whatsApp;
+        this.email = email;
+        this.award = award;
+    }*/
+
+    public Participants(String name, String division, String email, Boolean award) {
+        this.name = name;
+        this.division = division;
         this.email = email;
         this.award = award;
     }
